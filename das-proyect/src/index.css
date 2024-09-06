@@ -23,7 +23,7 @@ body {
 
 .static {
     width: 20%;
-    background-color: #4f1717;
+    background-color: #000000;
     height: 100vh;
     overflow-y: auto;
     /*Sin scroll en las secciones laterales */
@@ -48,7 +48,7 @@ body {
     /* Deja espacio para la columna estática derecha */
     flex-grow: 1;
     /*la columna del emdio se ajusta al espacio sobrante*/
-    background-color: #b1b0f2;
+    background-color: #141212;
     min-height: 100vh;
     /* Asegura que ocupe al menos toda la altura de la ventana */
     
@@ -111,7 +111,7 @@ body {
 }
 
 .information {
-    background-color: rgb(61, 50, 50);
+    background-color: rgb(227, 224, 224);
     width: 100%;
     height: 120px;
     overflow: hidden;
@@ -129,7 +129,7 @@ body {
 
 .posts {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #8e7e7e;
     width: 100%;
 }
 
@@ -142,7 +142,7 @@ body {
 .feed {
     margin-left: 80px;
     margin-right: 80px;
-    background-color: #bb6161;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos hijos horizontalmente */
@@ -155,12 +155,12 @@ body {
 
 .publication {
     position: relative;
-    background-color: #a27575;
+    background-color: #0b0a0a;
     padding: 20px; /* Espacio interno */
     
 }
 #publicfeed {
-    background-color: aqua;
+    background-color: rgb(231, 242, 242);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional, para un efecto de sombra */
     width: 100%;
     /* Cambia el tamaño a 100% para ajustarse al contenedor */
@@ -185,7 +185,7 @@ body {
 }
 
 #publicfeed {
-    background-color: aqua;
+    background-color: rgb(246, 255, 255);
     padding: 10px;
     width: 400px;
 }
@@ -201,9 +201,6 @@ body {
     bottom: -260px;
 }
 
-#iconcomment {
-    
-}
 
 .comments {
     background-color: rgb(248, 248, 251);
@@ -224,9 +221,6 @@ body {
 .comments.hide {
     max-height: 0; /* Oculta el contenido */
 }
-.comments hr:last-child {
-    display: none;
-}
 
 .separatorcoment {
     border: none;
@@ -238,7 +232,6 @@ body {
 
 .contentcomment {
     background-color: rgb(169, 214, 214);
-    border-radius: 4px;
     position: relative;
     overflow: hidden;
     display: flex;

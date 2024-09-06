@@ -11,7 +11,6 @@ import gato from "./images/th.jpeg";
 function App() {
   //mostrar o no mostrar contenedor de comentarios
   const [commentsVisible, setCommentsVisible] = useState({ 1: false, 2: false });
-
   // Manejador para alternar la visibilidad de los comentarios
   const toggleComments = (postId) => {
     setCommentsVisible(prevState => ({
@@ -19,6 +18,31 @@ function App() {
       [postId]: !prevState[postId]
     }));
   };
+
+  //CARGAR COMENTARIOS DENTRO DE CONTENEDOR DE COMENTARIOS
+  //Agregamos estado para los comentarios
+  const [comments, setComments] = useState({ 1: [], 2: [], 3: [], 4: [] }); // Guarda los comentarios por postId
+  const [newComment, setNewComment] = useState({ 1: '', 2: '', 3: '', 4: '' }); // Guarda el comentario actual que se está escribiendo
+  //Funcion para manejar el envío de comentarios
+  const handleSendComment = (postId) => {
+    if (newComment[postId].trim() !== '') {
+      setComments(prevComments => ({
+        ...prevComments,
+        [postId]: [...prevComments[postId], newComment[postId]] // Añade el nuevo comentario al postId específico
+      }));
+      setNewComment(prevState => ({
+        ...prevState,
+        [postId]: ''  // Limpia solo el campo de texto del postId actual
+      }));
+      // Mostrar el contenedor de comentarios al enviar un comentario
+      setCommentsVisible(prevState => ({
+        ...prevState,
+        [postId]: true // Asegura que los comentarios se muestren sin alternarlos
+      }));
+
+    }
+  };
+
   return (
     <div className="container">
       <div className="section static left">
@@ -70,7 +94,7 @@ function App() {
           </div>
           <div className="feed">
             {/* Mapeo para crear múltiples publicaciones */}
-            {[1, 2,3,4].map((postId) => (
+            {[1, 2, 3, 4].map((postId) => (
               <section key={postId} className="publication">
                 <img id="profilepublic" src={gato} />
                 <div className="namepublic">
@@ -89,23 +113,31 @@ function App() {
                   <img id="imgfeed" src={gato} alt="Feed" />
                   {commentsVisible[postId] && (
                     <div className={`comments ${commentsVisible[postId] ? 'show' : 'hide'}`}>
-                      <label>HOLA</label>
-                      <hr className="separatorcoment" />
-                      <label>HOLA</label>
-                      <hr className="separatorcoment" />
-                      <label>HOLA</label>
-                      <hr className="separatorcoment" />
-                    </div>)}
-                  <div className="contentcomment">
+                      {comments[postId].map((comment, index) => (
+                        <div key={index}>
+                          <label>{comment}</label>
+                          <hr className="separatorcoment" />
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  <div className="contentcomment" >
                     <TextField
-                      id='text'
+                      id={`text-${postId}`}
                       variant="outlined"
                       placeholder="Escribe algo..."
                       size="small"
+                      fullWidth
+                      value={newComment[postId] || ''} // Asigna el valor del campo de texto correspondiente al postId
+                      onChange={(e) => setNewComment({
+                        ...newComment,
+                        [postId]: e.target.value // Actualiza solo el comentario del postId actual
+                      })}
                       InputLabelProps={{ shrink: false }} // Evita que el label se mueva
                     />
                     <div className="icon">
-                      <IconButton color="primary">
+                      <IconButton color="primary" onClick={() => handleSendComment(postId)}
+                      >
                         <SendIcon />
                       </IconButton>
                     </div>
