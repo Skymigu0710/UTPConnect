@@ -1,0 +1,21 @@
+
+.moreinformation {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.posts {
+    padding: 20px;
+    background-color: #8e7e7e;
+    width: 100%;
+}
+
+.contentinfo {
+    padding: 20px;
+    background-color: #e9e9e9;
+    width: 100%;
+}
