@@ -3,7 +3,9 @@ import "./grupos.css"
 
 export default function Grupos() {
 	return(
-		<div className="group">
+        <div className="group">
+            <input type="text" placeholder="Buscar grupos..." />
+            <button class="search-button">Buscar</button>
             <h1>Groups</h1>
             <ul className="group-list">
                 <li className="group-item">
