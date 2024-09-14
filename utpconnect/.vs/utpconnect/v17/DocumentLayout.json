@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\grupos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\menu.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\grupos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,88 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "index.js",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.js",
-              "RelativeDocumentMoniker": "src\\index.js",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.js",
-              "RelativeToolTip": "src\\index.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-06T05:10:43.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "menu.css",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.css",
-              "RelativeDocumentMoniker": "src\\menu.css",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.css",
-              "RelativeToolTip": "src\\menu.css",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-06T05:09:05.438Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "menu.js",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.js",
-              "RelativeDocumentMoniker": "src\\menu.js",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\menu.js",
-              "RelativeToolTip": "src\\menu.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-06T05:05:14.38Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.css",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.css",
-              "RelativeDocumentMoniker": "src\\index.css",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\index.css",
-              "RelativeToolTip": "src\\index.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-06T05:03:08.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "grupos.js",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.js",
-              "RelativeDocumentMoniker": "src\\grupos.js",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.js",
-              "RelativeToolTip": "src\\grupos.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-09-06T05:01:07.483Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "grupos.css",
-              "DocumentMoniker": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.css",
-              "RelativeDocumentMoniker": "src\\grupos.css",
-              "ToolTip": "C:\\Users\\joel\\Documents\\ProyectoUTP\\UTPConnect\\utpconnect\\src\\grupos.css",
-              "RelativeToolTip": "src\\grupos.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-06T05:01:05.384Z"
             }
           ]
         }
