@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #BD371A;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+
+.logo h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+
+.menu {
+    list-style-type: none;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #0d95e8;
+}
+
+body {
+   
+    font-family: Arial, sans-serif;
+}

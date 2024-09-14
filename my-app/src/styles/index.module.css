@@ -3,7 +3,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-
     min-height: 100vh;
     /*asi el contenedor cresca se mostrara sus atributos*/
 }
@@ -11,34 +10,31 @@
     padding: 0px;
     background-color: #d4aeae;
     box-sizing: border-box;
-
 }
 .static {
-    width: 20%;
+    width: 0px;
     background-color: #000000;
     height: 100vh;
     overflow-y: auto;
     /*Sin scroll en las secciones laterales */
-    position: fixed;
     top: 0;
 }
 .static.left {
     left: 0;
+    position: absolute;
     /* Ubica la columna estática izquierda en el borde izquierdo */
 }
 
 .static.right {
     right: 0;
+    position: absolute;
     /* Ubica la columna estática derecha en el borde derecho */
 }
 .scrollable {
-    margin-left: 20%;
-    /* Deja espacio para la columna estática izquierda */
-    margin-right: 20%;
-    /* Deja espacio para la columna estática derecha */
+
     flex-grow: 1;
     /*la columna del emdio se ajusta al espacio sobrante*/
-    background-color: #141212;
+    background-color: #ba7e7e;
     min-height: 100vh;
     /* Asegura que ocupe al menos toda la altura de la ventana */
     

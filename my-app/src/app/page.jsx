@@ -8,6 +8,12 @@ export default function Home() {
   const goToProfile = () => {
     router.push('/profile');
   };
+  const goToMainpage = () => {
+    router.push('/mainfeed');
+  };
+  const goToLogin = () => {
+    router.push('/LoginRegister');
+  }; 
 
   return (
     <div>

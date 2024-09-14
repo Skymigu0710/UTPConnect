@@ -5,6 +5,9 @@ import styles from '../styles/index.module.css'; // Importa los estilos del mód
 import StudentsProfile from '../components/studentsprofile';
 import ProfilePosts from '../components/profileposts';
 import ProfileOptions from '../components/profileoptions';
+//JOEL CODE
+import Menu from '../components/menu';
+import Groups from '../components/grupos';
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
 /**
@@ -46,9 +49,7 @@ export default function Profile() {
 
   return (
     <div className={styles.container}>
-      <div className={`${styles.section} ${styles.static} ${styles.left}`}>
-        sadsd
-      </div>
+           <Menu/>
       <div className={`${styles.section} ${styles.scrollable}`}>
         <div className={styles.profile}>
           <StudentsProfile gato={gato} />
@@ -72,7 +73,7 @@ export default function Profile() {
         </div>
       </div>
       <div className={`${styles.section} ${styles.static} ${styles.right}`}>
-        AAA
+        <Groups gato={gato}/>
       </div>
     </div>
   );
