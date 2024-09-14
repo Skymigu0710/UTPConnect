@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/GroupCreation.module.css';
+import './styles/GroupCreation.css';
 
 function GroupCreation({ onCreateGroup }) {
   const [localGroupName, setLocalGroupName] = useState('');

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles/GroupProfile.module.css';
+import './styles/GroupProfile.css';
 
 function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation }) {
   const [posts, setPosts] = useState([]); // Estado para las publicaciones
