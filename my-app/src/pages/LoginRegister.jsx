@@ -25,12 +25,12 @@ const LoginRegister = ({ onLogin }) => {
             <form action="">
                 <h1>Inicio de sesión</h1>
                 <div className="input-box">
-                    <input type="text" placeholder="Nombre de usuario" requiered />
+                    <input type="text" placeholder="Nombre de usuario" required />
                     <FaUser className="icon"/>
                 </div>
                 <div className="input-box">
                     <input type="password" 
-                    placeholder="contraseña" requiered />
+                    placeholder="contraseña" required />
                     <FaLock className="icon"/>
                 </div>
                 <div className="remember-forgot">
@@ -48,16 +48,16 @@ const LoginRegister = ({ onLogin }) => {
             <form action="">
                 <h1>Registro</h1>
                 <div className="input-box">
-                    <input type="text" placeholder="Nombre de usuario" requiered />
+                    <input type="text" placeholder="Nombre de usuario" required />
                     <FaUser className="icon"/>
                 </div>
                 <div className="input-box">
-                    <input type="email" placeholder="correo electronico" requiered />
+                    <input type="email" placeholder="correo electronico" required />
                     <FaEnvelope  className="icon"/>
                 </div>
                 <div className="input-box">
                     <input type="password" 
-                    placeholder="Contraseña" requiered />
+                    placeholder="Contraseña" required />
                     <FaLock className="icon"/>
                 </div>
                 <div className="remember-forgot">
