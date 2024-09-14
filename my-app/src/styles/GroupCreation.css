@@ -1,13 +1,36 @@
+<<<<<<< HEAD
+=======
+html,
+body {
+position: absolute;
+align-content: center; 
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+}
+
+
+>>>>>>> main
 /* Estilo en blanco y negro para la página de creación de grupo */
 .group-creation-page {
     background-color: #ffffff;
     padding: 40px;
+<<<<<<< HEAD
     max-width: 500px;
+=======
+    max-width: 400px;
+>>>>>>> main
     margin: 0 auto;
     border: 1px solid #d0d0d0; /* Borde gris claro */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+<<<<<<< HEAD
     text-align: center;
+=======
+    padding-right: 10px;
+    overflow: hidden; 
+>>>>>>> main
   }
   
   .group-creation-page h3 {
@@ -17,9 +40,14 @@
     color: #000000; /* Texto negro */
   }
   
+<<<<<<< HEAD
   .group-creation-page input,
   .group-creation-page select {
     width: 100%;
+=======
+  .group-creation-page input {
+    width: 350px;
+>>>>>>> main
     padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #d0d0d0;
@@ -28,7 +56,20 @@
     background-color: #f0f0f0; /* Fondo gris claro */
     color: #000000;
   }
+<<<<<<< HEAD
   
+=======
+  .group-creation-page select {
+    width: 375px;
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #000000;
+    margin-bottom: 20px;
+  }
+>>>>>>> main
   .group-creation-page button {
     background-color: #000000; /* Botón negro */
     border: none;

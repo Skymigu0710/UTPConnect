@@ -139,19 +139,50 @@
   border: 1px solid #d0d0d0;
 }
 
-/* Botones en el perfil del grupo */
-.group-details button {
-  background-color: #000000;
-  border: none;
-  color: white;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 100%;
+/* Botón de seguir el grupo (más pequeño) */
+.group-details .follow-button {
+  background-color: #007bff; /* Color azul para distinguirlo */
+  padding: 5px 15px; /* Tamaño reducido */
+  font-size: 14px; /* Texto más pequeño */
+  border-radius: 15px;
+  width: auto; /* Evita que ocupe todo el ancho */
+  display: inline-block;
 }
 
-.group-details button:hover {
-  background-color: #333333;
+.group-details .follow-button:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+/* Toast o mensaje flotante */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0.9;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+/* Animación para el toast */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  10%, 90% {
+    opacity: 0.9;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
 }
