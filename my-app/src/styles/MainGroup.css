@@ -1,0 +1,59 @@
+/* Estilo general de la aplicación */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Secciones con bordes verticales negros y uso completo del espacio */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  padding: 20px;
+  border-left: 2px solid black; /* Línea negra vertical a la izquierda */
+  border-right: 2px solid black; /* Línea negra vertical a la derecha */
+}
+
+.section.static {
+  background-color: #ffffff;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 20vh; /* Altura fija para las secciones estáticas */
+}
+
+.section.scrollable {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  flex-grow: 2; /* La sección central ocupa más espacio */
+  overflow-y: auto; /* Permite scroll si el contenido es demasiado grande */
+}
+
+/* Perfil del grupo */
+.profile {
+  background-color: #ffffff;
+  border: 1px solid #000000; /* Borde negro */
+  border-radius: 10px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Tamaño máximo */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Sección de portada */
+.space.portada {
+  font-weight: bold;
+  font-size: 18px;
+  color: #14171a;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6ecf0;
+  margin-bottom: 20px;
+  text-align: left;
+}
