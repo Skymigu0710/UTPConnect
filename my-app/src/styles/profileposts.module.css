@@ -1,6 +1,6 @@
 .publication {
     position: relative;
-    background-color: #a14646;
+    background-color: #efecec;
     padding: 20px; /* Espacio interno */
     
     
@@ -27,7 +27,7 @@
     left: 70px;
     width: 200px;
     text-align: center;
-    color: white;
+    color: rgb(16, 15, 15);
 }
 
 #publicfeed {
@@ -70,14 +70,14 @@
 
 .separatorcoment {
     border: none;
-    border-top: 2px solid lightgray;
+    border-top: 2px solid rgb(10, 10, 10);
     /* Cambia el color y grosor */
     margin: 5px 0;
     /* Ajusta el espacio alrededor del separador */
 }
 
 .contentcomment {
-    background-color: rgb(169, 214, 214);
+    background-color: rgb(234, 253, 253);
     position: relative;
     overflow: hidden;
     display: flex;

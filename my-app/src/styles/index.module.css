@@ -34,7 +34,7 @@
 
     flex-grow: 1;
     /*la columna del emdio se ajusta al espacio sobrante*/
-    background-color: #ba7e7e;
+    background-color: #020202;
     min-height: 100vh;
     /* Asegura que ocupe al menos toda la altura de la ventana */
     
@@ -45,7 +45,7 @@
 .feed {
     margin-left: 80px;
     margin-right: 80px;
-    background-color: rgb(56, 56, 67);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos hijos horizontalmente */

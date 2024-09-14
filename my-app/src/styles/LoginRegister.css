@@ -9,10 +9,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: url('/images/fondo.jpg')no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+  background: url('/images/fondo.jpg');
+
 }
 
 .wrapper {

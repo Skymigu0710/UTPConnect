@@ -2,14 +2,14 @@
 .group {
     width: 250px;
     height: 100vh;
-    background-color: #BD371A;
+    background-color: #000000;
     color: white;
     position: fixed;
     top: 0;
     padding: 20px;
 }
 h1 {
-    color: #000000;
+    color: #fffdfd;
     font-size: 24px;
 }
 .group-list {
