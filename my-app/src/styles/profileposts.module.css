@@ -1,0 +1,98 @@
+.publication {
+    position: relative;
+    background-color: #efecec;
+    padding: 20px; /* Espacio interno */
+    
+    
+}
+#publicfeed {
+    background-color: rgb(105, 180, 180);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional, para un efecto de sombra */
+    width: 100%;
+    /* Cambia el tamaño a 100% para ajustarse al contenedor */
+
+    
+}
+#profilepublic {
+    background-color: antiquewhite;
+    height: 50px;
+    border-radius: 100%;
+    width: 50px;
+    object-fit: cover;
+}
+
+.namepublic {
+    position: absolute;
+    top: 15px;
+    left: 70px;
+    width: 200px;
+    text-align: center;
+    color: rgb(16, 15, 15);
+}
+
+#publicfeed {
+    background-color: rgb(246, 255, 255);
+    padding: 10px;
+    width: 400px;
+}
+
+#imgfeed {
+    width: 100%;
+    height: auto;
+}
+
+.showcomments {
+    height: 0px;
+    position: relative;
+    bottom: -260px;
+}
+
+
+.comments {
+    background-color: rgb(248, 248, 251);
+    border-radius: 4px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-bottom: 2px solid lightgrey;
+    gap: 0px;
+    /* Para dar espacio entre los comentarios */
+    transition: max-height 3s ease; /* Transición suave para la altura máxima */
+    overflow: hidden; /* Asegura que el contenido oculto no sea visible */
+}
+.comments.show {
+    max-height: 300px; /* Ajusta según el contenido */
+}
+.comments.hide {
+    max-height: 0; /* Oculta el contenido */
+}
+
+.separatorcoment {
+    border: none;
+    border-top: 2px solid rgb(10, 10, 10);
+    /* Cambia el color y grosor */
+    margin: 5px 0;
+    /* Ajusta el espacio alrededor del separador */
+}
+
+.contentcomment {
+    background-color: rgb(234, 253, 253);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+#text {
+    width: 372px;
+}
+
+.icon {
+    position: absolute;
+    right: 0px;
+}
+
+.separator {
+    position: relative;
+
+}
