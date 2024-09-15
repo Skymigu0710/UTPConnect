@@ -5,13 +5,12 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+   font-family: "Poppins", sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
   background: url('/images/fondo.jpg');
-
 }
 
 .wrapper {
@@ -24,8 +23,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0,.2);
     color: #fff;
-    display: flex;
-    align-items: center;
     overflow: hidden;
     transition: height .2s ease;
 }
