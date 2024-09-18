@@ -3,7 +3,7 @@ import "../styles/menu.css";
 
 const menu = ({ }) => (
 
-    <nav className="sidebar">
+    <div className="sidebar">
             <div className="logo">
                 <h1>UTPConnect</h1>
             </div>
@@ -13,7 +13,7 @@ const menu = ({ }) => (
             <li><a className="menu-item" href="#profile">Profile</a></li>
             <li><a className="menu-item" href="#groups">Groups</a></li>
             </ul>
-        </nav>
+     </div>
 );
 export default menu;
 

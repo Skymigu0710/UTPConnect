@@ -4,7 +4,7 @@ import "../styles/grupos.css";
 
 const grupos = ({gato }) => (
     <div className="group">
-            <input type="text" placeholder="Buscar grupos..." />
+            <input type="search" class="search-input" placeholder="Buscar grupos..." />
             <button className="search-button">Buscar</button>
             <h1>Groups</h1>
             <ul className="group-list">

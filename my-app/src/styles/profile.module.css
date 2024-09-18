@@ -1,0 +1,65 @@
+
+.container {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    /*asi el contenedor cresca se mostrara sus atributos*/
+}
+
+.static {
+    position: relative;
+    width: 300px;
+    background-color: #f8f8f8;
+    top: 0;
+}
+
+.scrollable {
+    position: relative;
+    display: flex;
+    background-color: #000000;
+    min-height: 100vh;
+    flex:1;
+    
+}
+.feed {
+    margin-left: 80px;
+    margin-right: 80px;
+    background-color: rgb(6, 6, 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    overflow: hidden;
+    justify-content: flex-start;
+    gap: 10px; /* Espacio entre posts */
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.createpost{
+    position: relative;
+    display: flex;
+    height: 150px;
+    width: 61%;
+    color: wheat;
+    background-color: rgb(255, 246, 246);
+    border-radius: 10px;
+    flex-direction: column;
+    padding:20px ;
+}
+.postsome{
+    height: 90px;
+    outline: none;
+    border: 0px;
+    padding: 10px;
+    margin-top: 3px ;
+    margin-bottom:3px;
+    border-radius: 20px;
+}
+.imgicon{
+    
+}
+.profile{
+    width: 850px;
+    margin-right: 20px;
+    border-right: 1px solid #ffffff;
+
+}

@@ -1,6 +1,7 @@
-"use client";  
+"use client";
 import React, { useState } from 'react';
-import styles from '../styles/index.module.css'; // Importa los estilos del módulo CSS
+import styles from '../styles/profile.module.css'; // Importa los estilos del módulo CSS
+import style from '../styles/profileposts.module.css';
 //importar módulos
 import StudentsProfile from '../components/studentsprofile';
 import ProfilePosts from '../components/profileposts';
@@ -8,6 +9,9 @@ import ProfileOptions from '../components/profileoptions';
 //JOEL CODE
 import Menu from '../components/menu';
 import Groups from '../components/grupos';
+
+import { FaImage } from 'react-icons/fa'; // Importa los íconos
+
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
 /**
@@ -46,16 +50,30 @@ export default function Profile() {
       }));
     }
   };
-
   return (
+
     <div className={styles.container}>
-           <Menu/>
+      <div className={`${styles.section} ${styles.static}`}>
+        <Menu />
+      </div>
       <div className={`${styles.section} ${styles.scrollable}`}>
         <div className={styles.profile}>
           <StudentsProfile gato={gato} />
           <ProfileOptions />
           <div className={styles.feed}>
             {/* Mapeo para crear múltiples publicaciones */}
+            <div className={styles.createpost}>
+              <div className={style.namepublic}>
+                Maricielo Alata Roman
+              </div>
+              <div>
+              </div>
+              <input type="text" className={styles.postsome} placeholder='Postea algo...' />
+              <div className={styles.addcontent}>
+                <FaImage style={styles.icon} /> {/* Ícono de imagen */}
+              </div>
+            </div>
+
             {[1, 2, 3, 4].map((postId) => (
               <ProfilePosts
                 key={postId}
@@ -71,10 +89,9 @@ export default function Profile() {
             ))}
           </div>
         </div>
+        <Groups gato={gato} />
       </div>
-      <div className={`${styles.section} ${styles.static} ${styles.right}`}>
-        <Groups gato={gato}/>
-      </div>
+
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import styles from"../styles/index.module.css";
+import styles from"../styles/profile.module.css";
 import Menu from "../components/menu";
 import Grupos from "../components/grupos";
 import VentanaPost from "../components/crearPost";
