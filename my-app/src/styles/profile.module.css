@@ -24,22 +24,21 @@
 .feed {
     margin-left: 80px;
     margin-right: 80px;
-    background-color: rgb(6, 6, 6);
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra los elementos hijos horizontalmente */
     overflow: hidden;
-    justify-content: flex-start;
     gap: 10px; /* Espacio entre posts */
     box-sizing: border-box;
     margin-top: 10px;
+    background-size:100px ;
+    background-image: url('/images/postback.jpg');
 }
 .createpost{
     position: relative;
     display: flex;
     height: 150px;
     width: 61%;
-    color: wheat;
     background-color: rgb(255, 246, 246);
     border-radius: 10px;
     flex-direction: column;
@@ -54,8 +53,22 @@
     margin-bottom:3px;
     border-radius: 20px;
 }
-.imgicon{
-    
+.addcontent{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.addcontent button{
+    flex-grow: 1;
+    background-color: black;
+    color: white ;
+}
+.icon{
+   color: rgb(12, 12, 12);
+   font-size: 20PX;
+}
+.addcontent button:hover{
+    background-color: rgb(208, 134, 134);
 }
 .profile{
     width: 850px;

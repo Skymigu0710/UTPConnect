@@ -58,4 +58,3 @@ const profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
     </>  
 );
 export default profileposts;
-
