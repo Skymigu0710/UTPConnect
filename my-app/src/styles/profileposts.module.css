@@ -82,7 +82,7 @@
     overflow: hidden;
     display: flex;
 }
-.contentcomment input{
+.contentcomment TextField{
     width: 100%;
     background-color: #000000;
     border: 0px;

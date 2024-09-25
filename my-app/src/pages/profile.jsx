@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/profile.module.css'; // Importa los estilos del módulo CSS
 //importar módulos
-import StudentsProfile from '../components/studentsprofile';
+import StudentsProfile from '../components/Studentsprofile';
 import PostFeed from '../components/PostFeed';
 import InformationFeed from '../components/InformationFeed';
-import ProfileOptions from '../components/profileoptions';
+import ProfileOptions from '../components/Profileoptions';
 //JOEL CODE
 import Menu from '../components/menu';
 import Groups from '../components/grupos';

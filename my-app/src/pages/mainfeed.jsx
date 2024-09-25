@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 import styles from "../styles/profile.module.css";
-import Menu from "../components/menu";
-import Groups from "../components/grupos";
+import Menu from "../components/Menu";
+import Groups from "../components/Grupos";
 import PostFeed from '../components/PostFeed';
-import VentanaPost from "../components/crearPost";
-import MuroPost from "../components/muroPost";
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
 
