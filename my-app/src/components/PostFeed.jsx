@@ -3,7 +3,7 @@ import styl from '../styles/profile.module.css'; // Importa los estilos del mód
 import style from '../styles/profileposts.module.css'; 
 import { FaImage } from 'react-icons/fa';
 import { Button } from '@mui/material';
-import Profileposts from './Profileposts';
+import Profileposts from '../components/Profileposts';
 
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';

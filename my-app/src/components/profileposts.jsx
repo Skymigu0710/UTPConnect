@@ -4,7 +4,8 @@ import SendIcon from '@mui/icons-material/Send';
 import styles from '../styles/profileposts.module.css';
 import { TextField, IconButton } from '@mui/material';
 import Image from 'next/image';
-const profileposts = ({ postId, commentsVisible, toggleComments, comments, newComment, setNewComment, handleSendComment, gato }) => (
+
+const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newComment, setNewComment, handleSendComment, gato }) => (
     <>
         <section key={postId} className={styles.publication}>
             <div className={styles.postInfo}>
@@ -55,4 +56,4 @@ const profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
         </section>
     </>
 );
-export default profileposts;
+export default Profileposts;
