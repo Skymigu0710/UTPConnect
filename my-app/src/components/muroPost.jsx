@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/muroPost.css';
 
-const Wall = ({ posts, onPostCreate }) => {
+const Wall = ({ posts }) => {
     const [newComment, setNewComment] = useState(''); // Estado para manejar el nuevo comentario
 
     // Maneja el cambio en el campo de texto del comentario

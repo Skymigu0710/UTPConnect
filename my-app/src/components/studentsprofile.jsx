@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '@mui/material';
 import styles from '../styles/studentsprofile.module.css';
 
+import Image from 'next/image';
+
 const studentsprofile = ({ gato }) => (
     <>
         <div className={`${styles.space} ${styles.portada}`}>
@@ -23,7 +25,10 @@ const studentsprofile = ({ gato }) => (
         
         <div className={`${styles.space} ${styles.information}`}>
         <div className={`${styles.space} ${styles.photo}`}>
-            <img id={styles.imgprofile} src={gato} alt="Perfil" />
+            <Image id={styles.imgprofile} src={gato} alt="Perfil" 
+                width= {130}
+                height={130}
+            />
             <div className={styles.namecontent}>
                 MARICIELO ALATA ROMAN
                 <br />

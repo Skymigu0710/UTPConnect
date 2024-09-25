@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from '../styles/profile.module.css'; // Importa los estilos del módulo CSS
 //importar módulos
 import StudentsProfile from '../components/Studentsprofile';
@@ -32,7 +32,10 @@ export default function Profile() {
         </div>
         <StudentsProfile gato={gato} />
           <div className={styles.feed}>
-          <ProfileOptions components={[<PostFeed/> ,<InformationFeed /> ]} />
+          <ProfileOptions components={[
+              <PostFeed key="postfeed" />, 
+              <InformationFeed key="informationfeed" />
+            ]}  />
           </div>
         </div>
         <Groups gato={gato} />

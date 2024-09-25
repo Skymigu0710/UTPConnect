@@ -29,6 +29,7 @@ export default function Home() {
       <button onClick={goToProfile}>Ir al Perfil</button>
       <button onClick={goToCreateGroup}>Crear Grupo</button>
       <button onClick={goToProfileGroup}>Perfil del Grupo</button>
+      <button onClick={goToLogin}>LOGIN</button>
     </div>
   );
 

@@ -2,13 +2,16 @@ import React from 'react';
 import ChatIcon from '@mui/icons-material/Chat';
 import SendIcon from '@mui/icons-material/Send';
 import styles from '../styles/profileposts.module.css';
-import { TextField, IconButton, Button } from '@mui/material';
-
+import { TextField, IconButton } from '@mui/material';
+import Image from 'next/image';
 const profileposts = ({ postId, commentsVisible, toggleComments, comments, newComment, setNewComment, handleSendComment, gato }) => (
     <>
         <section key={postId} className={styles.publication}>
             <div className={styles.postInfo}>
-                <img id={styles.profilepublic} src={gato} alt="Publicación" />
+                <Image id={styles.profilepublic} src={gato} alt="Publicación" 
+                width= {50}
+                height={50}
+                />
                 <div className={styles.namepublic}>
                     Maricielo Alata Roman
                 </div>
