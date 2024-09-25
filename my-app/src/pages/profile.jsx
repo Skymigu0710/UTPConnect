@@ -7,8 +7,8 @@ import PostFeed from '../components/PostFeed';
 import InformationFeed from '../components/InformationFeed';
 import ProfileOptions from '../components/Profileoptions';
 //JOEL CODE
-import Menu from '../components/menu';
-import Groups from '../components/grupos';
+import Menu from '../components/Menu';
+import Groups from '../components/Grupos';
 
 
 // Define la variable gato para la imagen
