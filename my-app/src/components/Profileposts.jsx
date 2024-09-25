@@ -56,4 +56,8 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
         </section>
     </>
 );
+<<<<<<< HEAD:my-app/src/components/profileposts.jsx
 export default Profileposts;
+=======
+export default profileposts;
+>>>>>>> 0ba93719f87e681585d4208f71a540b73188518f:my-app/src/components/Profileposts.jsx
