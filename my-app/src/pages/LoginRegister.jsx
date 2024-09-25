@@ -3,15 +3,9 @@ import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
 import '../styles/LoginRegister.css';
 
 
+const LoginRegister = () => {
 
-const LoginRegister = ({ onLogin }) => {
-     
-    const handleLogin = (e) => {
-        e.preventDefault();
-        onLogin(); // Llama a la función onLogin que redirige a la página principal
-      };
-    const[action, setAction] = useState('');
-    
+    const[action, setAction] = useState('');  
     const registerLink = () => {
         setAction('active');
     };
@@ -37,7 +31,7 @@ const LoginRegister = ({ onLogin }) => {
                     <label> <input type="checkbox"/>recordarme </label>
                     <a href="#"> ¿Has olvidado tu contraseña?</a>
                 </div>
-                <button type="submit" onClick={handleLogin} >Ingresar</button>
+                <button type="button" onClick={handleLogin} >Ingresar</button>
                 <div className="register-link">
                     <p>¿No tienes una cuenta? <a href="#" onClick={registerLink}>Registrarse</a> </p>
                 </div>
