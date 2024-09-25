@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "../styles/profile.module.css";
 import Menu from "../components/Menu";
-import Groups from "../components/Grupos";
+import Grupos from "../components/Grupos";
 import PostFeed from '../components/PostFeed';
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
@@ -40,7 +40,7 @@ export default function App() {
                         <PostFeed />
                     </div>
                 </div>
-                <Groups gato={gato} />
+                <Grupos gato={gato} />
             </div>
         </div>
     );

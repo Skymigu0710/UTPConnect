@@ -3,7 +3,7 @@ import styl from '../styles/profile.module.css'; // Importa los estilos del mód
 import style from '../styles/profileposts.module.css'; 
 import { FaImage } from 'react-icons/fa';
 import { Button } from '@mui/material';
-import ProfilePosts from './Profileposts';
+import Profileposts from './Profileposts';
 
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
@@ -55,7 +55,7 @@ export default function Profile() {
             </div>
         </div>
         {[1, 2, 3, 4,5,6].map((postId) => (
-              <ProfilePosts
+              <Profileposts
                 key={postId}
                 postId={postId}
                 commentsVisible={commentsVisible}
