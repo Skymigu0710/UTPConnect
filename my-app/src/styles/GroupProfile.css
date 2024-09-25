@@ -36,7 +36,7 @@
 
 /* Perfil del grupo */
 .profile {
-  background-color: #ffffff;
+  background-color: #bf8282;
   border: 1px solid #000000; /* Borde negro */
   border-radius: 10px;
   width: 100%; /* Ocupa todo el ancho disponible */
@@ -153,5 +153,5 @@
 }
 
 .group-details button:hover {
-  background-color: #333333;
+  background-color: #1b7316;
 }

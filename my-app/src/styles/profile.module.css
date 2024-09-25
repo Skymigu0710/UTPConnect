@@ -1,0 +1,75 @@
+
+.container {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    /*asi el contenedor cresca se mostrara sus atributos*/
+}
+
+.static {  
+    background-color: #f8f8f8;
+    top: 0;
+    flex:1;
+    overflow: hidden;
+    border-right: 1px solid rgb(47, 51, 54);
+}
+
+.scrollable {
+    position: relative;
+    display: flex;
+    background-color: #000000;
+    min-height: 100vh;
+    flex:3;
+}
+.feed {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 10px;
+    background-size:100px ;
+}
+.createpost{
+    position: relative;
+    display: flex;
+    height: 150px;
+   
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    flex-direction: column;
+    padding:20px ;
+    border-top: 0.1px solid rgb(47, 51, 54);
+}
+.postsome{
+    height: 90px;
+    outline: none;
+    border: 0px;
+    padding: 10px;
+    margin-top: 3px ;
+    margin-bottom:3px;
+    background-color: #000000;
+    color: white;
+}
+.addcontent{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.addcontent button{
+    flex-grow: 1;
+    background-color: rgb(93, 195, 226);
+    color: white ;
+}
+.icon{
+   color: rgb(255, 255, 255);
+   font-size: 20PX;
+}
+.addcontent button:hover{
+    background-color: rgb(208, 134, 134);
+}
+.profile{
+    position: relative;
+    margin-right: 10px;
+    border-right: 0.1px solid rgb(47, 51, 54);
+    margin-top:43px;
+    overflow: hidden;
+    width: 650px;
+}

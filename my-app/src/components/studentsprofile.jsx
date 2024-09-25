@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import styles from '../styles/StudentsProfile.module.css';
+import styles from '../styles/studentsprofile.module.css';
 
 const studentsprofile = ({ gato }) => (
     <>
@@ -12,12 +12,16 @@ const studentsprofile = ({ gato }) => (
                     backgroundColor: 'grey',
                     color: 'white',
                     borderRadius: '20px ',
-                    left: '85%',
+                    right: '0px',
                     bottom: '10px',
+                    marginRight: '10px',
                 }}>
                 EDITAR
             </Button>
+
         </div>
+        
+        <div className={`${styles.space} ${styles.information}`}>
         <div className={`${styles.space} ${styles.photo}`}>
             <img id={styles.imgprofile} src={gato} alt="Perfil" />
             <div className={styles.namecontent}>
@@ -26,14 +30,14 @@ const studentsprofile = ({ gato }) => (
                 @U19300992
             </div>
         </div>
-        <div className={`${styles.space} ${styles.information}`}>
             <Button variant="contained"
                 style={{
-                    position: 'relative',
+                    position: 'absolute',
                     backgroundColor: 'black',
                     color: 'white',
                     borderRadius: '20px',
-                    left: '85%',
+                    right: '0px',
+                    marginRight: '10px',
                     top: '10px',
                 }}>
                 Seguir
