@@ -1,39 +1,43 @@
 
 
 .sidebar {
+    display: flex;
     height: 100vh;
     background-color: #000000;
     color: white;
-    position: fixed;
     padding: 10px;
-    width: 279px;
+    justify-content: flex-end;
+    top:0px;
+    bottom: 0px;
+    height: 100%;
 }
 
 
-.logo h1 {
+.logo h1{  
     font-size: 24px;
     margin-bottom: 30px;
-    margin-left: 50px;
 }
 
 .menu {
+    padding: 30px;
     list-style-type: none;
+    position: fixed;
 }
 
 .menu-item {
-    display: block;
+    display: flex;
     padding: 15px 20px;
     text-decoration: none;
+    width: 100px;
     color: white;
     font-size: 18px;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
-
 }
 
 .menu-item:hover {
-    background-color: #e8dddd;
+    background-color: #b8b1b1;
 }
 
 body {

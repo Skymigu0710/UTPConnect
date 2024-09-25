@@ -1,13 +1,14 @@
 
+
 .group {
     background-color: #000000;
     color: white;
-    padding: 20px;
-    margin-top: 10px;
+    padding-left:30px;
+    padding-right:30px;
+    margin-top: 50px;
     height: 300px;
     border-radius: 20px;
-    border: 1px solid white;
-    width: 280px;
+    border: 1px solid  rgb(47, 51, 54) ;
 }
 h1 {
     color: #fffdfd;
@@ -21,7 +22,6 @@ h1 {
     display: flex;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid #e1e8ed;
 }
 .group-item img {
     border-radius: 50%;
@@ -32,29 +32,26 @@ h1 {
 .group-item h2 {
     margin: 0;
     font-size: 1.2em;
+    padding-right: 30px;
 }
 .group-item p {
     margin: 0;
     color: #657786;
 }
+.searchbarre{
+    position: absolute;
+    position: fixed;
+    top:0px;
+    z-index: 1;
+    width:157vh ;
+
+    background-color: #e1e5e8;
+    opacity: 0.8;
+}
 .search-input {
     font-size: 14px;
-    flex: 1;
-    border-radius: 8px;
     padding: 13px;
     outline: none;
-    width: 200px;
-    height: 30px;
-    margin-right: 10px ;
-}
-
-.search-button {
-    border: none;
-    padding: 5px 10px;
-    background-color: #427771;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px 5px 5px 5px;
-    transition: background-color 0.3s;
+    border: 0px;
+    width: 661px;
 }

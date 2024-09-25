@@ -7,19 +7,18 @@ import { TextField, IconButton, Button } from '@mui/material';
 const profileposts = ({ postId, commentsVisible, toggleComments, comments, newComment, setNewComment, handleSendComment, gato }) => (
     <>
      <section key={postId} className={styles.publication}>
+        <div className={styles.postInfo}>
         <img id={styles.profilepublic} src={gato} alt="Publicación" />
         <div className={styles.namepublic}>
             Maricielo Alata Roman
         </div>
+        </div>
         <div id={styles.publicfeed}>
             <div className={styles.showcomments}>
-                <IconButton
-                    id={styles.iconcomment}
-                    color="black"
-                    onClick={() => toggleComments(postId)}
-                >
-                    <ChatIcon />
-                </IconButton>
+                    <ChatIcon id={styles.iconcomment}
+                    cursor='pointer'
+                    onClick={() => toggleComments(postId)} />
+
             </div>
             <img id={styles.imgfeed} src={gato} alt="Feed" />
             {commentsVisible[postId] && (
@@ -33,18 +32,15 @@ const profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                 </div>
             )}
             <div className={styles.contentcomment}>
-                <TextField
-                    id={`text-${postId}`}
-                    variant="outlined"
+                <input
+                    id={`text-${postId}`}                  
                     placeholder="Escribe algo..."
-                    size="small"
-                    fullWidth
                     value={newComment[postId] || ''} // Asigna el valor del campo de texto correspondiente al postId
                     onChange={(e) => setNewComment({
                         ...newComment,
                         [postId]: e.target.value // Actualiza solo el comentario del postId actual
                     })}
-                    InputLabelProps={{ shrink: false }} // Evita que el label se mueva
+                    InputLabelProps={{ shrink: false}} // Evita que el label se mueva
                 />
                 <div className={styles.icon}>
                     <IconButton color="primary" onClick={() => handleSendComment(postId)}>
@@ -52,7 +48,6 @@ const profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                     </IconButton>
                 </div>
             </div>
-            <hr className={styles.separator} />
         </div>
     </section>
     </>  

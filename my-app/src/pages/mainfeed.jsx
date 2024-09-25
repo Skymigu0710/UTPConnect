@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import styles from"../styles/profile.module.css";
+import styles from "../styles/profile.module.css";
 import Menu from "../components/menu";
-import Grupos from "../components/grupos";
+import Groups from "../components/grupos";
+import PostFeed from '../components/PostFeed';
 import VentanaPost from "../components/crearPost";
 import MuroPost from "../components/muroPost";
 // Define la variable gato para la imagen
@@ -41,18 +42,21 @@ export default function App() {
     };
 
     return (
-
-
         <div className={styles.container}>
-            <Menu />
-            <div className={`${styles.section} ${styles.scrollable}`}>
-                <VentanaPost onPostCreate={handlePostCreate} />
-                <MuroPost posts={posts} />
-
-                <div className={`${styles.section} ${styles.static} ${styles.right}`}>
-                    <Grupos gato={gato} />
+            <div className={`${styles.section} ${styles.static}`}>
+        <Menu/>
+      </div>
+            < div className={`${styles.section} ${styles.scrollable}`}>
+                <div className={styles.profile}>
+                    <div className="searchbarre">
+                        <input type="search" className="search-input" placeholder="Buscar grupos..." />
+                    </div>
+                    <div className={styles.feed}>
+                        <PostFeed />
+                    </div>
                 </div>
-            </div >
+                <Groups gato={gato} />
+            </div>
         </div>
     );
 }

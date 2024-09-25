@@ -27,7 +27,10 @@ export default function Profile() {
       </div>
       <div className={`${styles.section} ${styles.scrollable}`}>
         <div className={styles.profile}>
-          <StudentsProfile gato={gato} />
+        <div className="searchbarre">
+            <input type="search" className="search-input" placeholder="Buscar grupos..." />
+        </div>
+        <StudentsProfile gato={gato} />
           <div className={styles.feed}>
           <ProfileOptions components={[<PostFeed/> ,<InformationFeed /> ]} />
           </div>

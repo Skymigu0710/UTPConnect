@@ -42,7 +42,7 @@ export default function Profile() {
   };
   return (
     <>
-        <div className={styl.createpost}>
+        <div className={styl.createpost} > 
             <div className={style.namepublic}>
                 Maricielo Alata Roman
             </div>
@@ -54,7 +54,7 @@ export default function Profile() {
                 <Button className={styl.button}>Post</Button>
             </div>
         </div>
-        {[1, 2, 3, 4,5].map((postId) => (
+        {[1, 2, 3, 4,5,6].map((postId) => (
               <ProfilePosts
                 key={postId}
                 postId={postId}
