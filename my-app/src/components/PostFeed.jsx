@@ -54,7 +54,7 @@ export default function Profile() {
                 <Button className={styl.button}>Post</Button>
             </div>
         </div>
-        {[1, 2, 3, 4,5,6].map((postId) => (
+        {[1, 2, 3, 4].map((postId) => (
               <Profileposts
                 key={postId}
                 postId={postId}

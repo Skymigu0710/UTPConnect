@@ -40,7 +40,7 @@
 #imgfeed {
     width: 500px;
     height: auto;
-    margin: auto 50px;
+    margin: auto 90px;
     border-radius:20px;
 }
 
@@ -82,19 +82,25 @@
     overflow: hidden;
     display: flex;
 }
-.contentcomment TextField{
-    width: 100%;
-    background-color: #000000;
-    border: 0px;
-    outline: none;
-    color: white;
-}
 
 #iconcomment {
     color:white;
 }
-.icon {
-    position: relative;
-    
+
+#sendicon{
+    align-items: center;
 }
 
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    #publicfeed {
+        background-color: rgb(0, 0, 0);
+        padding: 0px;
+        padding-top: 5px;
+    }
+    
+    #imgfeed {
+        width: 70%;  
+        margin: auto 60px;
+    }
+  }

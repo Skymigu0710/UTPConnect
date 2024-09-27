@@ -1,19 +1,16 @@
-
-
 .sidebar {
     display: flex;
     height: 100vh;
     background-color: #000000;
     color: white;
     padding: 10px;
-    justify-content: flex-end;
-    top:0px;
+    justify-content:center;
+    top: 0px;
     bottom: 0px;
     height: 100%;
 }
 
-
-.logo h1{  
+.logo h1 {
     font-size: 24px;
     margin-bottom: 30px;
 }
@@ -26,21 +23,65 @@
 
 .menu-item {
     display: flex;
-    padding: 15px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-decoration: none;
-    width: 100px;
     color: white;
     font-size: 18px;
+    margin-bottom: 40px;
     border-radius: 50px;
-    margin-bottom: 10px;
+    gap:10px;
+    align-items: center;
     transition: background-color 0.3s ease;
 }
+
 
 .menu-item:hover {
     background-color: #b8b1b1;
 }
 
-body {
-   
-    font-family: Arial, sans-serif;
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+
+    .sidebar {
+        display: flex;
+        height: 0;
+        background-color: #000000;
+        color: white;
+        bottom: 0;
+        height: 100%;
+    }
+
+    .logo h1 {
+        display: none;
+        width: 0px;
+    }
+
+    .menu-item p {
+        display: none;
+    }
+
+    .menu-item {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        color: white;
+        font-size: 8px;
+        border-radius: 0px;
+        margin-bottom: 0px;
+        transition: background-color 0.3s ease;
+        padding: 10px;
+        min-height: 100%;
+    }
+
+    .menu {
+        padding: 0px;
+        padding-left: 10px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-items: center;
+        
+    }
 }

@@ -1,6 +1,7 @@
 import React , { useState }from 'react';
 import styles from '../styles/profileoptions.module.css';
 import { Button } from '@mui/material';
+
 const Profileoptions = ({ components }) => {
     const [selectedComponentIndex, setSelectedComponentIndex] = useState(0); // Estado para controlar el componente seleccionado
     return(

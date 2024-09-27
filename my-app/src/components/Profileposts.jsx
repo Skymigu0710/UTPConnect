@@ -45,10 +45,22 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                             ...newComment,
                             [postId]: e.target.value // Actualiza solo el comentario del postId actual
                         })}
+                        sx={{
+                            width: '100%', // Puedes cambiar el ancho
+                            backgroundColor: '#000', // Cambia el color de fondo
+                            '& .MuiInputBase-input': {
+                                color: 'white',
+                                padding: '10px', // Espaciado interno
+                             border:'0px',
+                            },
+                            '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                //borderColor: 'transparent', // Elimina el borde azul cuando haces clic
+                            },
+                        }}
                     />
                     <div className={styles.icon}>
                         <IconButton color="primary" onClick={() => handleSendComment(postId)}>
-                            <SendIcon />
+                            <SendIcon id={styles.sendicon} />
                         </IconButton>
                     </div>
                 </div>
