@@ -1,7 +1,7 @@
 import React , { useState }from 'react';
 import styles from '../styles/profileoptions.module.css';
 import { Button } from '@mui/material';
-const profileoptions = ({ components }) => {
+const Profileoptions = ({ components }) => {
     const [selectedComponentIndex, setSelectedComponentIndex] = useState(0); // Estado para controlar el componente seleccionado
     return(
     <>
@@ -36,4 +36,4 @@ const profileoptions = ({ components }) => {
     </>
     );
 };
-export default profileoptions;
+export default Profileoptions;

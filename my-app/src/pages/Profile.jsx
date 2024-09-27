@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from '../styles/profile.module.css'; // Importa los estilos del módulo CSS
 //importar módulos
-import StudentsProfile from '../components/Studentsprofile';
+import Studentsprofile from '../components/Studentsprofile';
 import PostFeed from '../components/PostFeed';
 import InformationFeed from '../components/InformationFeed';
-import ProfileOptions from '../components/Profileoptions';
+import Profileoptions from '../components/Profileoptions';
 //JOEL CODE
-import Menu from '../components/menu';
-import Groups from '../components/grupos';
+import Menu from '../components/Menu';
+import Grupos from '../components/Grupos';
 
 
 // Define la variable gato para la imagen
@@ -30,12 +30,15 @@ export default function Profile() {
         <div className="searchbarre">
             <input type="search" className="search-input" placeholder="Buscar grupos..." />
         </div>
-        <StudentsProfile gato={gato} />
+        <Studentsprofile gato={gato} />
           <div className={styles.feed}>
-          <ProfileOptions components={[<PostFeed/> ,<InformationFeed /> ]} />
+          <Profileoptions components={[
+              <PostFeed key="postfeed" />, 
+              <InformationFeed key="informationfeed" />
+            ]}  />
           </div>
         </div>
-        <Groups gato={gato} />
+        <Grupos gato={gato} />
       </div>
 
     </div>

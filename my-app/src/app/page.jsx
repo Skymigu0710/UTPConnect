@@ -21,7 +21,9 @@ export default function Home() {
     router.push('/GroupProfile');
   };
 
-
+  const goToPMain = () => {
+    router.push('/Mainfeed');
+  };
   return (
     <div>
    
@@ -29,6 +31,8 @@ export default function Home() {
       <button onClick={goToProfile}>Ir al Perfil</button>
       <button onClick={goToCreateGroup}>Crear Grupo</button>
       <button onClick={goToProfileGroup}>Perfil del Grupo</button>
+      <button onClick={goToLogin}>LOGIN</button>
+      <button onClick={goToPMain}>MAIN</button>
     </div>
   );
 

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from "../styles/profile.module.css";
 import Menu from "../components/Menu";
-import Groups from "../components/Grupos";
+import Grupos from "../components/Grupos";
 import PostFeed from '../components/PostFeed';
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
 
 export default function App() {
-    const [posts, setPosts] = useState([
+    /*const [posts, setPosts] = useState([
         {
             id: 1,
             content: 'Hola a todos',
@@ -24,19 +24,7 @@ export default function App() {
                 profilePicture: gato,
             },
         },
-    ]);
-    //Crea un nuevo usuario
-    const handlePostCreate = (newPostContent) => {
-        const newPost = {
-            id: posts.length + 1,
-            content: newPostContent,
-            user: {
-                name: 'Joel Palomino',
-                profilePicture: gato,
-            },
-        };
-        setPosts([newPost, ...posts]);// A�ade el nuevo post al principio de la lista de posts
-    };
+    ]);*/
 
     return (
         <div className={styles.container}>
@@ -52,7 +40,7 @@ export default function App() {
                         <PostFeed />
                     </div>
                 </div>
-                <Groups gato={gato} />
+                <Grupos gato={gato} />
             </div>
         </div>
     );
