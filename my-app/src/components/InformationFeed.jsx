@@ -6,7 +6,7 @@ const MyComponent = () => {
 
 
   return (
-    <div >
+    <div className="infocontent">
 
       <div className="informationcontent">
         <div className="informationtext">

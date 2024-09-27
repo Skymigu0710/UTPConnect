@@ -1,3 +1,8 @@
+.infocontent{
+    display: flex;
+    justify-content: center;
+    margin-top: 10PX;    
+}
 .informationcontent{
     width: 430px;
     height: 410px;

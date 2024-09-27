@@ -29,8 +29,8 @@ export default function App() {
     return (
         <div className={styles.container}>
             <div className={`${styles.section} ${styles.static}`}>
-        <Menu/>
-      </div>
+                <Menu />
+            </div>
             < div className={`${styles.section} ${styles.scrollable}`}>
                 <div className={styles.profile}>
                     <div className="searchbarre">
@@ -40,8 +40,10 @@ export default function App() {
                         <PostFeed />
                     </div>
                 </div>
-                <Grupos gato={gato} />
             </div>
+            <div className={styles.groupsconteiner}>
+        <Grupos gato={gato} />
+        </div>
         </div>
     );
 }

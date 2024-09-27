@@ -28,7 +28,7 @@ export default function Profile() {
       <div className={`${styles.section} ${styles.scrollable}`}>
         <div className={styles.profile}>
         <div className="searchbarre">
-            <input type="search" className="search-input" placeholder="Buscar grupos..." />
+            <input type="search" className="search-input" placeholder="Buscar grupos..." />     
         </div>
         <Studentsprofile gato={gato} />
           <div className={styles.feed}>
@@ -38,9 +38,14 @@ export default function Profile() {
             ]}  />
           </div>
         </div>
+        <div className={styles.responsfooter}>
+        <Menu/>
+        </div>
+      </div>
+      <div className={styles.groupsconteiner}>
         <Grupos gato={gato} />
       </div>
-
     </div>
+
   );
 };
