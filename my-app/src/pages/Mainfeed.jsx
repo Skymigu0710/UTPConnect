@@ -40,10 +40,13 @@ export default function App() {
                         <PostFeed />
                     </div>
                 </div>
+                <div className={styles.responsfooter}>
+                    <Menu />
+                </div>
             </div>
             <div className={styles.groupsconteiner}>
-        <Grupos gato={gato} />
-        </div>
+                <Grupos gato={gato} />
+            </div>
         </div>
     );
 }

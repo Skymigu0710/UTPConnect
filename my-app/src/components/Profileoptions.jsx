@@ -22,7 +22,7 @@ const Profileoptions = ({ components }) => {
             < section className={styles.contentinfo} >
             <Button    onClick={() => setSelectedComponentIndex(1)}  variant="contained"
                 style={{                   
-                    backgroundColor: 'grey',
+                    backgroundColor: 'black',
                     color: 'white',    
                     width:'100%',
                     height:'100%',
