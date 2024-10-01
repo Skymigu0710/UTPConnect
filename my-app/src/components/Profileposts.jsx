@@ -9,22 +9,22 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
     <>
         <section key={postId} className={styles.publication}>
             <div className={styles.postInfo}>
-                <Image id={styles.profilepublic} src={gato} alt="Publicación" 
-                width= {50}
-                height={50}
+                <Image id={styles.profilepublic} src={gato} alt="Publicación"
+                    width={50}
+                    height={50}
                 />
                 <div className={styles.namepublic}>
                     Maricielo Alata Roman
                 </div>
             </div>
             <div id={styles.publicfeed}>
+                <img id={styles.imgfeed} src={gato} alt="Feed" />
                 <div className={styles.showcomments}>
                     <ChatIcon id={styles.iconcomment}
                         cursor='pointer'
                         onClick={() => toggleComments(postId)} />
 
                 </div>
-                <img id={styles.imgfeed} src={gato} alt="Feed" />
                 {commentsVisible[postId] && (
                     <div className={`${styles.comments} ${commentsVisible[postId] ? styles.show : styles.hide}`}>
                         {comments[postId].map((comment, index) => (
@@ -35,6 +35,7 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                         ))}
                     </div>
                 )}
+
                 <div className={styles.contentcomment}>
                     <TextField
                         InputLabelProps={{ shrink: false }} // Propiedad válida para TextField
@@ -51,7 +52,7 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                             '& .MuiInputBase-input': {
                                 color: 'white',
                                 padding: '10px', // Espaciado interno
-                             border:'0px',
+                                border: '0px',
                             },
                             '& .Mui-focused .MuiOutlinedInput-notchedOutline': {
                                 //borderColor: 'transparent', // Elimina el borde azul cuando haces clic

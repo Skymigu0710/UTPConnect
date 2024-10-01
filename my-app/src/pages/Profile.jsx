@@ -10,7 +10,6 @@ import Profileoptions from '../components/Profileoptions';
 import Menu from '../components/Menu';
 import Grupos from '../components/Grupos';
 
-
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
 /**
@@ -43,7 +42,7 @@ export default function Profile() {
         </div>
       </div>
       <div className={styles.groupsconteiner}>
-        <Grupos gato={gato} />
+            <Grupos gato={gato} />
       </div>
     </div>
 
