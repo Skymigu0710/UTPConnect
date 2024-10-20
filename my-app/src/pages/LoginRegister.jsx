@@ -7,6 +7,11 @@ import '../styles/LoginRegister.css';
 const LoginRegister = () => {
 
     const [action, setAction] = useState('');
+
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     const registerLink = () => {
         setAction('active');
     };
@@ -14,6 +19,36 @@ const LoginRegister = () => {
         setAction('');
     };
 
+    const handleRegister = async (e) => {
+        e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+        const userData = {
+            username,
+            email,
+            password,
+        };
+
+        try {
+            const response = await fetch(' http://localhost:8083/auth/register', {  // Cambia la URL según tu backend
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(userData),
+            });
+
+            if (!response.ok) {
+                throw new Error('Error en el registro');
+            }
+
+            const data = await response.json();
+            console.log(data); // Maneja la respuesta según sea necesario
+            // Puedes redirigir al usuario o mostrar un mensaje de éxito aquí
+        } catch (error) {
+            console.error(error);
+            // Maneja el error (puedes mostrar un mensaje al usuario)
+        }
+    };
     return (
         <div className="Logincontent"> 
             <div className={`wrapper ${action}`}>
@@ -41,19 +76,36 @@ const LoginRegister = () => {
                 </div>
 
                 <div className="form-box register">
-                    <form action="">
+                    <form onSubmit={handleRegister}>
                         <h1>Registro</h1>
                         <div className="input-box">
-                            <input type="text" placeholder="Nombre de usuario" required />
+                        <input 
+                                type="text" 
+                                placeholder="Nombre de usuario" 
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)} 
+                                required 
+                            />
                             <FaUser className="icon" />
                         </div>
                         <div className="input-box">
-                            <input type="email" placeholder="correo electronico" required />
+                            <input 
+                                type="email" 
+                                placeholder="correo electronico" 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)} 
+                                required 
+                            />
                             <FaEnvelope className="icon" />
                         </div>
                         <div className="input-box">
-                            <input type="password"
-                                placeholder="Contraseña" required />
+                            <input 
+                                type="password"
+                                placeholder="Contraseña" 
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)} 
+                                required 
+                            />
                             <FaLock className="icon" />
                         </div>
                         <div className="remember-forgot">

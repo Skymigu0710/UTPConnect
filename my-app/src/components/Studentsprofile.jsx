@@ -38,7 +38,7 @@ const studentsprofile = ({ gato }) => (
             <Button variant="contained"
                 style={{
                     position: 'absolute',
-                    backgroundColor: 'black',
+                    backgroundColor: 'rgb(93, 195, 226)',
                     color: 'white',
                     borderRadius: '20px',
                     right: '0px',

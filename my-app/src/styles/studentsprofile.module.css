@@ -11,7 +11,7 @@
 
 .photo {
     position: absolute;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     height: 130px;
     border-radius: 100%;
     width: 130px;
@@ -42,15 +42,15 @@
 .portada {
     width: 100%;
     height: 200px;
-    background-color: palegoldenrod;
+    background-color: rgb(255, 255, 255);
     position: relative;
     overflow: hidden;
     /*cualquier img no exceda los limites*/
 }
 
 .information {
-    background-color: rgb(227, 224, 224);
     width: 100%;
     height: 120px;
+    color: white;
    position: sticky;
 }
