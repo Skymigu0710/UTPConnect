@@ -4,7 +4,7 @@ import styles from '../styles/studentsprofile.module.css';
 
 import Image from 'next/image';
 
-const studentsprofile = ({ gato }) => (
+const studentsprofile = ({ gato, userData }) => (
     <>
         <div className={`${styles.space} ${styles.portada}`}>
             <img id={styles.imgcat} src={gato} alt="Portada" />
@@ -30,9 +30,9 @@ const studentsprofile = ({ gato }) => (
                 height={130}
             />
             <div className={styles.namecontent}>
-                MARICIELO ALATA ROMAN
+            {userData.name}
                 <br />
-                @U19300992
+                {userData.username}
             </div>
         </div>
             <Button variant="contained"

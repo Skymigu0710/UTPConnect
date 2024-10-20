@@ -7,7 +7,7 @@ import Profileposts from '../components/Profileposts';
 
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
-export default function Profile() {
+export default function Profile({ userData }) {
 
     // Estado para controlar la visibilidad de los comentarios en cada publicación
   const [commentsVisible, setCommentsVisible] = useState({ 1: false, 2: false });
@@ -44,7 +44,7 @@ export default function Profile() {
     <>
         <div className={styl.createpost} > 
             <div className={style.namepublic}>
-                Maricielo Alata Roman
+                {userData.name}
             </div>
             <div>
             </div>
