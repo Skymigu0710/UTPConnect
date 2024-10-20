@@ -1,0 +1,28 @@
+.infocontent{
+    display: flex;
+    justify-content: center;
+    margin-top: 10PX;  
+    flex-direction: column;
+}
+.informationcontent{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;  
+   color: white;
+}
+.info_unit{
+    height: 70px;
+    padding-left: 20px;
+}
+.editinfo{
+    display: flex;
+    background-color: black;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+.editinfo Button{
+    background-color: rgb(66, 138, 193);
+    color: white ;
+    width: 100%;
+    border-radius: 7px;
+}
