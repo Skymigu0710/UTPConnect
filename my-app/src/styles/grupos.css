@@ -22,8 +22,11 @@
 }
 .navcontent{
     position:sticky;
+    margin-top: 10px;
     padding: 10px;
-    background-color: wheat;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+    color: #000000;
 }
 .navcontent li {
     list-style: none;
