@@ -7,3 +7,13 @@ Joel Raul Palomino Mendoza User:Joel-Palomino
 Cris Nataly Quispe Sapa User: CrisNataly
 Jolaus Andy Meza Pérez User: Andybetmp
 Mijael Alexis Neira Castro User: MIJAELNC
+
+ACTUALIZACION DEL FRONTED
+
+3 PÁGINAS FUNCIONALES CON BACKEND con ENDPOINTS:
+- La página del login (logea al usuario registrado en la base de datos)  .
+- La página del perfil( muestra los datos del usuario al autenticarse)
+- La página de register ( registra a un usuario en la base de datos del miroservicio users)
+
+  Se instaló lo siguiente: npm install jsonwebtoken
+  
