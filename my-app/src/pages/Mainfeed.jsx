@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import { useRouter} from 'next/navigation'; // Importa useRouter
 import styles from "../styles/profile.module.css";
 import Menu from "../components/Menu";
 import Grupos from "../components/Grupos";
@@ -7,7 +8,10 @@ import PostFeed from '../components/PostFeed';
 const gato = '/images/th.jpeg';
 
 export default function App() {
- 
+
+    const router = new useRouter();
+
+    
     const [userData, setUserData] = useState(null); // Estado para almacenar los datos del usuario
     useEffect(() => {
       // Intenta obtener el token y los detalles del usuario desde localStorage
@@ -15,7 +19,7 @@ export default function App() {
       const storedUserDetails = localStorage.getItem('userDetails');
       if (!token) {
         // Si no hay token, redirige al login o maneja el error
-         router.push('/LoginRegister'); // Descomenta esta línea si necesitas redirigir
+        router.push('/LoginRegister'); // Descomenta esta línea si necesitas redirigir
         console.error('No se encontró token, redirigiendo al login');
         return;
       }
@@ -45,6 +49,7 @@ export default function App() {
                         <PostFeed userData={userData}/>
                     </div>
                 </div>
+                
                 <div className={styles.responsfooter}>
                     <Menu />
                 </div>

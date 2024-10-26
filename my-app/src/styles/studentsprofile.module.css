@@ -32,6 +32,10 @@
     right: inherit;
     object-fit: cover;
 }
+.icon{
+    font-size: 23px;
+    margin-left: 10px;
+}
 
 .namecontent {
     position: absolute;
