@@ -4,7 +4,7 @@ import styles from "../styles/profile.module.css";
 import Menu from "../components/Menu";
 import Grupos from "../components/Grupos";
 import PostFeed from '../components/PostFeed';
-// Define la variable gato para la imagen
+
 const gato = '/images/th.jpeg';
 
 export default function App() {
