@@ -75,11 +75,14 @@ const LoginRegister = () => {
 
             const data = await response.json();
             console.log(data);
+
             // Almacenar el token en localStorage
             localStorage.setItem('token', data.token);
             localStorage.setItem('userDetails', JSON.stringify(data.userDetails)); // Asegúrate de que 'userDetails' sea parte de la respuesta
+            localStorage.setItem('userId', data.userDetails.id_users);
+
             // Redirigir a otra ventana (puedes cambiar la URL)
-            router.push('/Profile');
+            router.push(`/Profile/${data.userDetails.id_users}`);
 
         } catch (error) {
             console.error(error);
