@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import style from '../styles/editProfile.module.css';
+import Image from 'next/image';
 
-
-const editForm = ( {handleCancel} ) => {
+const EditForm = ( {handleCancel} ) => {
 
     
 
@@ -55,11 +55,11 @@ const editForm = ( {handleCancel} ) => {
                             <label for="name" >Perfil:   </label>
                            <div className={style.contentPhoto}>
                            <div className={style.editphotoProfile} >
-                                <img
+                                <Image
                                     id="profilePreview"
                                     src="https://tse2.mm.bing.net/th?id=OIP.diWlmJ_Zi9MqIfeweIf1AgHaJN&pid=Api&P=0&h=180"
                                     alt="Imagen de portada"
-                                    class={style.profile_image}
+                                    className={style.profile_image}
                                     
                                     style={{ top: `${position.y}px` }}
                                 />
@@ -68,11 +68,11 @@ const editForm = ( {handleCancel} ) => {
                            </div>
                             <label for="name" >Portada:   </label>
                             <div className={style.editphoto} >
-                                <img
+                                <Image
                                     id="profilePreview"
                                     src="https://www.caracteristicass.de/wp-content/uploads/2023/02/imagenes-artisticas.jpg"
                                     alt="Imagen de portada"
-                                    class={style.cover_image}
+                                    className={style.cover_image}
                                     onMouseDown={startDrag}
                                     onMouseMove={onDrag}
                                     onMouseUp={stopDrag}
@@ -95,4 +95,4 @@ const editForm = ( {handleCancel} ) => {
         </>
     );
 }
-export default editForm;
+export default EditForm;

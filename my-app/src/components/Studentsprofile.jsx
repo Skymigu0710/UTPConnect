@@ -1,11 +1,11 @@
-import React, {useDebugValue, useState} from 'react';
+import React, {useState} from 'react';
 import { Button } from '@mui/material';
 import styles from '../styles/studentsprofile.module.css';
 import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
 import { FaEdit } from 'react-icons/fa'; 
 import Image from 'next/image';
 
-const studentsprofile = ({ gato, userData, handleclick }) => {
+function Studentsprofile ({ gato, userData, handleclick })  {
 
     //estado para controlar si se está siguiendo o no
     const [isfollowing, setIsfollowing] = useState(false);
@@ -64,4 +64,4 @@ return (
     </>
 );
 };
-export default studentsprofile;
+export default Studentsprofile;

@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState }from 'react';
 import "../styles/menu.css";
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-const menu = () => {
+function Menu ()  {
     const [userId, setUserId] = useState('');
 
     useEffect(() => {
@@ -30,6 +29,6 @@ const menu = () => {
     </div>
 );
 };
-export default menu;
+export default Menu;
 
 

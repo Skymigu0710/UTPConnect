@@ -33,7 +33,7 @@ export default function Profile() {
 
     // Intenta obtener el token y los detalles del usuario desde localStorage
     const token = localStorage.getItem('token');
-    const storedUserDetails = localStorage.getItem('userDetails');
+  
     if (!token) {
       // Si no hay token, redirige al login o maneja el error
       router.push('/LoginRegister'); // Descomenta esta línea si necesitas redirigir
@@ -66,12 +66,7 @@ export default function Profile() {
 
   fetchUserData();
 }, [id_users]); // El efecto se ejecutará cada vez que id_users cambie
-const handleSearch = (e) => {
-  const newId = e.target.value; // Obtener el nuevo ID del input de búsqueda
-  if (newId) {
-      router.push(`/profile?id_users=${newId}`); // Cambiar la URL
-  }
-};
+
   if (!userData) {
     return <div>Cargando...</div>;
   }

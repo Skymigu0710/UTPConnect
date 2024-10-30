@@ -83,11 +83,12 @@ const LoginRegister = () => {
 
             // Redirigir a otra ventana (puedes cambiar la URL)
             router.push(`/Profile/${data.userDetails.id_users}`);
-
+            
         } catch (error) {
             console.error(error);
             // Maneja el error (puedes mostrar un mensaje al usuario)
         }
+        
     };
     return (
         <div className="Logincontent">
