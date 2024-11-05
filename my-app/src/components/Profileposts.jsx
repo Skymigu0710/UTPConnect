@@ -47,7 +47,7 @@ const Profileposts = ({ postId, commentsVisible, toggleComments, comments, newCo
                             [postId]: e.target.value // Actualiza solo el comentario del postId actual
                         })}
                         sx={{
-                            width: '100%', // Puedes cambiar el ancho
+                            width: '100%', 
                             backgroundColor: '#000', // Cambia el color de fondo
                             '& .MuiInputBase-input': {
                                 color: 'white',
