@@ -30,7 +30,7 @@ const studentsprofile = ({ gato, userData }) => (
                 height={130}
             />
             <div className={styles.namecontent}>
-            {userData.name}
+            {userData.name} {userData.last_name}
                 <br />
                 {userData.username}
             </div>
