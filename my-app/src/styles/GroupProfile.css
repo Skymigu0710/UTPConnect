@@ -36,7 +36,7 @@
 
 /* Perfil del grupo */
 .profile {
-  background-color: #ffffff;
+  background-color: #bf8282;
   border: 1px solid #000000; /* Borde negro */
   border-radius: 10px;
   width: 100%; /* Ocupa todo el ancho disponible */
@@ -149,6 +149,7 @@
   display: inline-block;
 }
 
+<<<<<<< HEAD
 .group-details .follow-button:hover {
   background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
@@ -185,4 +186,8 @@
     opacity: 0;
     transform: translateX(-50%) translateY(10px);
   }
+=======
+.group-details button:hover {
+  background-color: #1b7316;
+>>>>>>> main
 }

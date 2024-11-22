@@ -1,21 +1,15 @@
-"use client";  
 import React, { useState } from 'react';
-import styles from '../styles/index.module.css'; // Importa los estilos del módulo CSS
-//importar módulos
-import StudentsProfile from '../components/studentsprofile';
-import ProfilePosts from '../components/profileposts';
-import ProfileOptions from '../components/profileoptions';
-//JOEL CODE
-import Menu from '../components/menu';
-import Groups from '../components/grupos';
+import styl from '../styles/profile.module.css'; // Importa los estilos del módulo CSS
+import style from '../styles/profileposts.module.css'; 
+import { FaImage } from 'react-icons/fa';
+import { Button } from '@mui/material';
+import Profileposts from '../components/Profileposts';
+
 // Define la variable gato para la imagen
 const gato = '/images/th.jpeg';
-/**
- * Componente principal de la aplicación.
- * @returns {JSX.Element} El componente renderizado.
- */
-export default function Profile() {
-  // Estado para controlar la visibilidad de los comentarios en cada publicación
+export default function Profile({ userData }) {
+
+    // Estado para controlar la visibilidad de los comentarios en cada publicación
   const [commentsVisible, setCommentsVisible] = useState({ 1: false, 2: false });
   // Función para alternar la visibilidad de los comentarios
   const toggleComments = (postId) => {
@@ -46,18 +40,22 @@ export default function Profile() {
       }));
     }
   };
-
   return (
-    <div className={styles.container}>
-           <Menu/>
-      <div className={`${styles.section} ${styles.scrollable}`}>
-        <div className={styles.profile}>
-          <StudentsProfile gato={gato} />
-          <ProfileOptions />
-          <div className={styles.feed}>
-            {/* Mapeo para crear múltiples publicaciones */}
-            {[1, 2, 3, 4].map((postId) => (
-              <ProfilePosts
+    <>
+        <div className={styl.createpost} > 
+            <div className={style.namepublic}>
+                {userData.name}
+            </div>
+            <div>
+            </div>
+            <input type="text" className={styl.postsome} placeholder='Postea algo...' />
+            <div className={styl.addcontent}>
+                <FaImage className={styl.icon} /> {/* Ícono de imagen */}
+                <Button className={styl.button}>Post</Button>
+            </div>
+        </div>
+        {[1, 2, 3, 4].map((postId) => (
+              <Profileposts
                 key={postId}
                 postId={postId}
                 commentsVisible={commentsVisible}
@@ -69,12 +67,6 @@ export default function Profile() {
                 gato={gato}
               />
             ))}
-          </div>
-        </div>
-      </div>
-      <div className={`${styles.section} ${styles.static} ${styles.right}`}>
-        <Groups gato={gato}/>
-      </div>
-    </div>
+    </>
   );
 }

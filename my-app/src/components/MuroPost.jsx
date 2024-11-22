@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/muroPost.css';
-
-const Wall = ({ posts, onPostCreate }) => {
+import Image from 'next/image';
+const Wall = ({ posts }) => {
     const [newComment, setNewComment] = useState(''); // Estado para manejar el nuevo comentario
 
     // Maneja el cambio en el campo de texto del comentario
@@ -22,7 +22,7 @@ const Wall = ({ posts, onPostCreate }) => {
             {posts.map(post => (
                 <div key={post.id} className="post">
                     <div className="post-header">
-                        <img src={post.user.profilePicture} alt="" className="profile-picture" />
+                        <Image src={post.user.profilePicture} alt="" className="profile-picture" />
                         <div className="user-info">
                             <h3>{post.user.name}</h3>
                         </div>

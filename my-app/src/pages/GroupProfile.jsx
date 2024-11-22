@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/GroupProfile.css';
+import Image from 'next/image';
 
 function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation }) {
   const [posts, setPosts] = useState([]); 
@@ -54,7 +55,7 @@ function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation })
       <div className="group-header">
         {groupImage && (
           <div className="group-image">
-            <img src={groupImage} alt="Group Cover" className="group-image-circle" />
+            <Image src={groupImage} alt="Group Cover" className="group-image-circle" />
           </div>
         )}
 
@@ -87,7 +88,7 @@ function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation })
         />
         {newPostImage && (
           <div className="image-preview">
-            <img src={newPostImage} alt="Preview" />
+            <Image src={newPostImage} alt="Preview" />
           </div>
         )}
         <button onClick={handleAddPost}>
@@ -105,7 +106,7 @@ function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation })
                 <p>{post.content}</p>
                 {post.image && (
                   <div className="post-image">
-                    <img src={post.image} alt="Post" />
+                    <Image src={post.image} alt="Post" />
                   </div>
                 )}
               </div>
