@@ -1,13 +1,45 @@
-import React, { useState } from 'react';
-import './GroupProfile.css';
+import React, { useState, useEffect } from 'react';
+import '../styles/GroupProfile.css';
 
 function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation }) {
-  const [posts, setPosts] = useState([]); 
+  const [isFollowing, setIsFollowing] = useState(false);
   const [newPostContent, setNewPostContent] = useState('');
   const [newPostImage, setNewPostImage] = useState(null);
-  const [isFollowing, setIsFollowing] = useState(false); 
-  const [showToast, setShowToast] = useState(false); // Estado para el mensaje flotante
-  const [toastMessage, setToastMessage] = useState(''); // Mensaje del toast
+  const [posts, setPosts] = useState([]);
+  const [groupDetails, setGroupDetails] = useState({
+    name: groupName,
+    privacy: groupPrivacy,
+    image: groupImage,
+  });
+
+  useEffect(() => {
+    // Obtener datos del backend
+    const fetchGroupDetails = async () => {
+      try {
+        const response = await fetch('https://tu-backend.com/api/groups/details', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setGroupDetails(data);
+          setPosts(data.posts || []); // Asumiendo que los posts vienen en la respuesta
+        } else {
+          console.error('Error al obtener los detalles del grupo');
+        }
+      } catch (error) {
+        console.error('Error al obtener los detalles del grupo:', error);
+      }
+    };
+
+    fetchGroupDetails();
+  }, []);
+
+  const toggleFollowGroup = () => {
+    setIsFollowing(!isFollowing);
+  };
 
   const handleNewPostImage = (e) => {
     const file = e.target.files[0];
@@ -20,54 +52,56 @@ function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation })
     }
   };
 
-  const handleAddPost = () => {
-    if (newPostContent.trim()) {
-      const newPost = {
-        id: posts.length + 1,
-        content: newPostContent,
-        image: newPostImage,
-      };
-      setPosts([...posts, newPost]); 
-      setNewPostContent(''); 
-      setNewPostImage(null); 
-    } else {
-      alert('Escribe algo para publicar.');
+  const handleAddPost = async () => {
+    if (!newPostContent) {
+      alert('Por favor, escribe algo para publicar.');
+      return;
     }
-  };
 
-  const toggleFollowGroup = () => {
-    setIsFollowing(!isFollowing); 
-    showFollowToast(isFollowing ? `Dejaste de seguir ${groupName}` : `Estás siguiendo ${groupName}`);
-  };
+    const newPost = {
+      id: posts.length + 1,
+      content: newPostContent,
+      image: newPostImage,
+    };
 
-  const showFollowToast = (message) => {
-    setToastMessage(message);
-    setShowToast(true);
+    // Actualizar el estado local inmediatamente
+    setPosts([...posts, newPost]);
+    setNewPostContent('');
+    setNewPostImage(null);
 
-    setTimeout(() => {
-      setShowToast(false); // Oculta el toast después de 3 segundos
-    }, 3000);
+    // Enviar datos al backend
+    const response = await fetch('https://tu-backend.com/api/groups/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newPost),
+    });
+
+    if (!response.ok) {
+      console.error('Error al agregar la publicación');
+    }
   };
 
   return (
     <div className="group-profile-page">
       <div className="group-header">
-        {groupImage && (
+        {groupDetails.image && (
           <div className="group-image">
-            <img src={groupImage} alt="Group Cover" className="group-image-circle" />
+            <img src={groupDetails.image} alt="Group Cover" className="group-image-circle" />
           </div>
         )}
 
         <div className="group-details">
-          <h3>{groupName}</h3>
-          <p>Privacidad: {groupPrivacy === 'Public' ? 'Público' : 'Privado'}</p>
+          <h3>{groupDetails.name}</h3>
+          <p>Privacidad: {groupDetails.privacy === 'Public' ? 'Público' : 'Privado'}</p>
           <button onClick={onBackToCreation}>
             Regresar
           </button>
 
           {/* Botón para seguir o dejar de seguir el grupo */}
           <button onClick={toggleFollowGroup} className="follow-button">
-            {isFollowing ? 'Dejar de seguir' : 'Seguir'}
+            {isFollowing ? 'Dejar de seguir' : 'Seguir' }
           </button>
         </div>
       </div>
@@ -115,13 +149,6 @@ function GroupProfile({ groupName, groupPrivacy, groupImage, onBackToCreation })
           )}
         </div>
       </div>
-
-      {/* Mensaje flotante (toast) */}
-      {showToast && (
-        <div className="toast">
-          {toastMessage}
-        </div>
-      )}
     </div>
   );
 }

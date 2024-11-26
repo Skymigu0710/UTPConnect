@@ -1,14 +1,11 @@
-import React , { useState }from 'react';
+import React from 'react';
 import styles from '../styles/profileoptions.module.css';
 import { Button } from '@mui/material';
-
-const Profileoptions = ({ components }) => {
-    const [selectedComponentIndex, setSelectedComponentIndex] = useState(0); // Estado para controlar el componente seleccionado
-    return(
+const profileoptions = ({ }) => (
     <>
         <div className={`${styles.space} ${styles.moreinformation}`}>
             <section className={styles.posts}>
-            <Button onClick={() => setSelectedComponentIndex(0)} variant="contained"
+            <Button variant="contained"
                 style={{                   
                     backgroundColor: 'black',
                     color: 'white',    
@@ -20,9 +17,9 @@ const Profileoptions = ({ components }) => {
             </Button>
             </section>
             < section className={styles.contentinfo} >
-            <Button    onClick={() => setSelectedComponentIndex(1)}  variant="contained"
+            <Button variant="contained"
                 style={{                   
-                    backgroundColor: 'black',
+                    backgroundColor: 'grey',
                     color: 'white',    
                     width:'100%',
                     height:'100%',
@@ -30,11 +27,8 @@ const Profileoptions = ({ components }) => {
                 }}>
             Informacion
             </Button>
-           
             </section>
         </div>
-        {components[selectedComponentIndex]} {/* Muestra el componente del array en la posición del estado */}
     </>
-    );
-};
-export default Profileoptions;
+);
+export default profileoptions;

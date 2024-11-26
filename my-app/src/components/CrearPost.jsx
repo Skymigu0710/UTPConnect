@@ -25,7 +25,7 @@ const CreatePost = ({ onPostCreate }) => {
                     value={postContent}// Valor del campo de texto controlado por el estado
                     onChange={handleChange}// Maneja el cambio en el campo de texto
                     placeholder="Postea algo ..."// Texto de sugerencia en el campo de texto
-                    rows="4"// Numero de filas visibles del area de texto
+                    rows="4"// N�mero de filas visibles del �rea de texto
                     required// Hace que el campo sea obligatorio
                 ></textarea>
                 <button type="submit">Post</button>

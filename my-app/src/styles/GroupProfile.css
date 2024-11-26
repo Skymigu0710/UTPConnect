@@ -36,7 +36,7 @@
 
 /* Perfil del grupo */
 .profile {
-  background-color: #bf8282;
+  background-color: #ffffff;
   border: 1px solid #000000; /* Borde negro */
   border-radius: 10px;
   width: 100%; /* Ocupa todo el ancho disponible */
@@ -66,6 +66,8 @@
   object-fit: cover; /* Asegura que la imagen se recorte pero no se deforme */
   border: 3px solid #d0d0d0;
   margin-bottom: 20px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 /* Previsualización de las imágenes en el formulario */
@@ -76,6 +78,7 @@
   border-radius: 8px;
   border: 1px solid #d0d0d0;
   margin-bottom: 10px;
+  border: 1px solid #555555; /* Borde gris medio */
 }
 
 /* Imagen de las publicaciones */
@@ -90,12 +93,24 @@
 /* Formulario para agregar nueva publicación */
 .new-post-form {
   margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e2e2e; /* Fondo gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
 .new-post-form h4 {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .new-post-form textarea {
@@ -107,10 +122,33 @@
   resize: vertical;
   min-height: 80px;
   font-size: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #555555; /* Borde gris medio */
+  background-color: #3e3e3e; /* Fondo gris oscuro */
+  color: #ffffff; /* Texto blanco */
 }
 
 .new-post-form input[type="file"] {
   margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.new-post-form button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.new-post-form button:hover {
+  background-color: #0056b3;
 }
 
 /* Estilos para la sección de publicaciones */
@@ -149,7 +187,6 @@
   display: inline-block;
 }
 
-<<<<<<< HEAD
 .group-details .follow-button:hover {
   background-color: #0056b3; /* Color más oscuro al pasar el mouse */
 }
@@ -186,8 +223,72 @@
     opacity: 0;
     transform: translateX(-50%) translateY(10px);
   }
-=======
+}
+
+/* Estilo para la página de perfil del grupo */
+.group-profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para el encabezado del grupo */
+.group-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.group-image {
+  margin-bottom: 20px;
+}
+
+.group-details {
+  text-align: center;
+}
+
+.group-details h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.group-details p {
+  margin: 10px 0;
+}
+
+.group-details button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
 .group-details button:hover {
-  background-color: #1b7316;
->>>>>>> main
+  background-color: #0056b3;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #555555; /* Borde gris medio */
 }

@@ -1,34 +1,20 @@
-import React, { useEffect, useState }from 'react';
+import React from 'react';
 import "../styles/menu.css";
-import HomeIcon from '@mui/icons-material/Home';
-import PersonIcon from '@mui/icons-material/Person';
-import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import Link from 'next/link';
-function Menu ()  {
-    const [userId, setUserId] = useState('');
 
-    useEffect(() => {
-        // Obtener el ID del usuario del localStorage
-        const storedUserId = localStorage.getItem('userId');
-        if (storedUserId) {
-            setUserId(storedUserId);
-        }
-    }, []);
-    return (<div className="sidebar">
+const menu = ({ }) => (
 
-        <div className="menu">
+    <nav className="sidebar">
             <div className="logo">
                 <h1>UTPConnect</h1>
             </div>
-                <li><Link className="menu-item" href={"/Mainfeed"}><HomeIcon /><p>Home</p></Link> </li>
-                <li><Link className="menu-item" href={`/Profile/${userId}`}><PersonIcon /> <p>Profile</p></Link></li>
-                <li><Link className="menu-item" href="#home"><NotificationsNoneIcon /><p>Notifications</p></Link></li>
-                <li><Link className="menu-item" href={"/Profile"}><PeopleAltIcon /> <p>Groups</p></Link></li>
-        </div>
-    </div>
+            <ul className="menu">
+            <li><a className="menu-item" href="#home">Home</a></li>
+            <li><a className="menu-item" href="#notifications">Notifications</a></li>
+            <li><a className="menu-item" href="#profile">Profile</a></li>
+            <li><a className="menu-item" href="mainGroup">Groups</a></li>
+            </ul>
+        </nav>
 );
-};
-export default Menu;
+export default menu;
 
-
+		

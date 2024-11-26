@@ -1,3 +1,11 @@
+.portada {
+    width: 100%;
+    height: 200px;
+    background-color: palegoldenrod;
+    position: relative;
+    overflow: hidden;
+    /*cualquier img no exceda los limites*/
+}
 
 #imgcat {
     max-width: 100%;
@@ -11,14 +19,16 @@
 
 .photo {
     position: absolute;
-    background-color: rgb(255, 255, 255);
+    display: flex;
+    background-color: antiquewhite;
     height: 130px;
     border-radius: 100%;
     width: 130px;
-    margin-left: 40px;
+    left: 25%;
+    right: inherit;
     border: 5px solid white;
     object-fit: cover;
-    top: -90px;
+    top: 110px;
     /*posicion vertical de la imagen intacta*/
 }
 
@@ -31,10 +41,7 @@
     width: 130px;
     right: inherit;
     object-fit: cover;
-}
-.icon{
-    font-size: 23px;
-    margin-left: 10px;
+
 }
 
 .namecontent {
@@ -43,18 +50,11 @@
     width: 280px;
     bottom: -29px;
 }
-.portada {
-    width: 100%;
-    height: 200px;
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    overflow: hidden;
-    /*cualquier img no exceda los limites*/
-}
 
 .information {
+    background-color: rgb(227, 224, 224);
     width: 100%;
     height: 120px;
-    color: white;
-   position: sticky;
+    overflow: hidden;
+    display: 'block';
 }

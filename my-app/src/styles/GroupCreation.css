@@ -1,57 +1,228 @@
-/* Estilo en blanco y negro para la página de creación de grupo */
+/* Estilo oscuro para la página de creación de grupo */
 .group-creation-page {
-    background-color: #ffffff;
+    background-color: #1e1e1e; /* Fondo oscuro */
     padding: 40px;
-    max-width: 500px;
-    margin: 0 auto;
-    border: 1px solid #d0d0d0; /* Borde gris claro */
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+    border: 1px solid #333333; /* Borde gris oscuro */
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
     text-align: center;
-  }
-  
-  .group-creation-page h3 {
-    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-creation-page h3 {
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #000000; /* Texto negro */
-  }
-  
-  .group-creation-page input,
-  .group-creation-page select {
+    color: #ffffff; /* Texto blanco */
+}
+
+.group-creation-page input,
+.group-creation-page select {
     width: 100%;
     padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #d0d0d0;
+    border: 1px solid #555555; /* Borde gris medio */
     border-radius: 8px;
     font-size: 16px;
-    background-color: #f0f0f0; /* Fondo gris claro */
-    color: #000000;
-  }
-  
-  .group-creation-page button {
-    background-color: #000000; /* Botón negro */
+    background-color: #2e2e2e; /* Fondo gris oscuro */
+    color: #ffffff; /* Texto blanco */
+}
+
+.group-creation-page button {
+    background-color: #007bff; /* Botón azul */
     border: none;
     color: white;
-    padding: 10px;
+    padding: 12px;
     font-size: 18px;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 8px;
     cursor: pointer;
     width: 100%;
-  }
-  
-  .group-creation-page button:hover {
-    background-color: #333333; /* Negro más claro en hover */
-  }
-  
-  .image-preview {
+    transition: background-color 0.3s ease;
+}
+
+.group-creation-page button:hover {
+    background-color: #0056b3; /* Azul más oscuro en hover */
+}
+
+.image-preview {
     margin-top: 20px;
-  }
-  
-  .image-preview img {
+}
+
+.image-preview img {
     max-width: 100%;
     border-radius: 10px;
-    border: 1px solid #d0d0d0;
-  }
-  
+    border: 1px solid #555555; /* Borde gris medio */
+}
+
+/* Estilo para la página de perfil del grupo */
+.group-profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Estilo para el encabezado del grupo */
+.group-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.group-image {
+  margin-bottom: 20px;
+}
+
+.group-image-circle {
+  border-radius: 50%;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.group-details {
+  text-align: center;
+}
+
+.group-details h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.group-details p {
+  margin: 10px 0;
+}
+
+.group-details button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.group-details button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el formulario de nueva publicación */
+.new-post-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2e2e2e; /* Fondo gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.new-post-form h4 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.new-post-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #555555; /* Borde gris medio */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #3e3e3e; /* Fondo gris oscuro */
+  color: #ffffff; /* Texto blanco */
+}
+
+.new-post-form input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.new-post-form button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.new-post-form button:hover {
+  background-color: #0056b3;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #555555; /* Borde gris medio */
+}
+
+/* Estilo para la sección de publicaciones */
+.group-posts {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.group-posts h4 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background-color: #2e2e2e; /* Fondo gris oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.post p {
+  margin: 0;
+  color: #000000; /* Texto negro */
+}
+
+.post-image {
+  margin-top: 10px;
+}
+
+.post-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #555555; /* Borde gris medio */
+}

@@ -1,67 +1,44 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Button } from '@mui/material';
-import styles from '../styles/studentsprofile.module.css';
-import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
-import { FaEdit } from 'react-icons/fa'; 
-import Image from 'next/image';
+import styles from '../styles/StudentsProfile.module.css';
 
-function Studentsprofile ({ gato, userData, handleclick })  {
-
-    //estado para controlar si se está siguiendo o no
-    const [isfollowing, setIsfollowing] = useState(false);
-
-    //Funcion para alternar el estado de seguir/o dejar de seguir
-    const handleFollowToggle = () => {
-        setIsfollowing(!isfollowing);
-    }
-return (
-    
+const studentsprofile = ({ gato }) => (
     <>
-
         <div className={`${styles.space} ${styles.portada}`}>
             <img id={styles.imgcat} src={gato} alt="Portada" />
             <Button variant="contained"
                 style={{
                     position: 'absolute',
                     backgroundColor: 'grey',
-                    borderRadius: '10px',
-                    right: '0px',
+                    color: 'white',
+                    borderRadius: '20px ',
+                    left: '85%',
                     bottom: '10px',
-                    marginRight: '10px',
                 }}>
-                  <FaEdit className={styles.icon} onClick={handleclick}/>
+                EDITAR
             </Button>
         </div>
-        
-        <div className={`${styles.space} ${styles.information}`}>
         <div className={`${styles.space} ${styles.photo}`}>
-            <Image id={styles.imgprofile} src={gato} alt="Perfil" 
-                width= {130}
-                height={130}
-            />
+            <img id={styles.imgprofile} src={gato} alt="Perfil" />
             <div className={styles.namecontent}>
-            {userData.name}
+                MARICIELO ALATA ROMAN
                 <br />
-                {userData.username}
+                @U19300992
             </div>
         </div>
+        <div className={`${styles.space} ${styles.information}`}>
             <Button variant="contained"
                 style={{
-                    position: 'absolute',
-                    backgroundColor: isfollowing ? 'grey' : 'rgb(93, 195, 226)',
+                    position: 'relative',
+                    backgroundColor: 'black',
                     color: 'white',
-                    borderRadius: '15px',
-                    right: '0px',
-                    marginRight: '10px',
+                    borderRadius: '20px',
+                    left: '85%',
                     top: '10px',
-                }}
-                onClick={handleFollowToggle}//controlar el click
-                >       
-                {isfollowing ? 'Unfollow' : 'Follow'}
-                {isfollowing ? <IoRemoveCircle className={styles.icon} /> : <IoAddCircle className={styles.icon} />}
+                }}>
+                Seguir
             </Button>
         </div>
     </>
 );
-};
-export default Studentsprofile;
+export default studentsprofile;

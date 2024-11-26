@@ -1,13 +1,9 @@
 /* styles/globals.css */
-
 html,
 body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
-    background: black;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Previene el desbordamiento horizontal */
+    margin-left: 145px;
+    margin-right: 145px;
 }
