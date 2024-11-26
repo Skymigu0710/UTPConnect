@@ -1,0 +1,157 @@
+/* Estilo general de la aplicación */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Secciones con bordes verticales negros y uso completo del espacio */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  padding: 20px;
+  border-left: 2px solid black; /* Línea negra vertical a la izquierda */
+  border-right: 2px solid black; /* Línea negra vertical a la derecha */
+}
+
+.section.static {
+  background-color: #ffffff;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  height: 20vh; /* Altura fija para las secciones estáticas */
+}
+
+.section.scrollable {
+  background-color: #f8f8f8;
+  padding: 40px 0;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  flex-grow: 2; /* La sección central ocupa más espacio */
+  overflow-y: auto; /* Permite scroll si el contenido es demasiado grande */
+}
+
+/* Perfil del grupo */
+.profile {
+  background-color: #bf8282;
+  border: 1px solid #000000; /* Borde negro */
+  border-radius: 10px;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1200px; /* Tamaño máximo */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Sección de portada */
+.space.portada {
+  font-weight: bold;
+  font-size: 18px;
+  color: #14171a;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e6ecf0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Imagen circular del grupo */
+.group-image-circle {
+  width: 120px; /* Ancho fijo */
+  height: 120px; /* Altura fija */
+  border-radius: 50%;
+  object-fit: cover; /* Asegura que la imagen se recorte pero no se deforme */
+  border: 3px solid #d0d0d0;
+  margin-bottom: 20px;
+}
+
+/* Previsualización de las imágenes en el formulario */
+.image-preview img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 200px; /* Limita la altura máxima para evitar que la imagen se estire */
+  object-fit: contain; /* La imagen se ajusta al contenedor sin estirarse */
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  margin-bottom: 10px;
+}
+
+/* Imagen de las publicaciones */
+.post-image img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  max-height: 300px; /* Limita la altura máxima para evitar que se estire */
+  object-fit: cover; /* La imagen se recorta para llenar el espacio sin estirarse */
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+}
+
+/* Formulario para agregar nueva publicación */
+.new-post-form {
+  margin-bottom: 20px;
+}
+
+.new-post-form h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.new-post-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  margin-bottom: 10px;
+  resize: vertical;
+  min-height: 80px;
+  font-size: 16px;
+}
+
+.new-post-form input[type="file"] {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la sección de publicaciones */
+.group-posts {
+  margin-top: 20px;
+}
+
+.posts-list {
+  padding: 10px 0;
+}
+
+.post {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+}
+
+/* Imagen dentro de una publicación */
+.post-image img {
+  width: 100%;
+  max-height: 300px; /* Limita la altura para evitar estiramiento vertical */
+  object-fit: cover; /* Llenar el contenedor sin distorsionar */
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+}
+
+/* Botones en el perfil del grupo */
+.group-details button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.group-details button:hover {
+  background-color: #1b7316;
+}
