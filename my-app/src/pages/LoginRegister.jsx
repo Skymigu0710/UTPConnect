@@ -9,6 +9,8 @@ const LoginRegister = () => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setFirstName] = useState(''); // Estado para el nombre
+    const [last_name, setLastName] = useState('');   // Estado para el apellido
     const [showPassword, setShowPassword] = useState(false); // Estado para controlar la visibilidad de la contraseña
 
     const registerLink = () => {
@@ -21,9 +23,11 @@ const LoginRegister = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         const userData = {
-            username,
-            email,
-            password,
+            name,      // Nuevo campo: Nombre
+            last_name,       // Nuevo campo: Apellido
+            username,       // Nombre de usuario
+            email,          // Correo electrónico
+            password,       // Contraseña
         };
 
         try {
@@ -44,6 +48,14 @@ const LoginRegister = () => {
             if (data.token) {
                 localStorage.setItem('token', data.token);
             }
+
+            // Limpiar los campos después del registro exitoso
+            setFirstName('');
+            setLastName('');
+            setUsername('');
+            setEmail('');
+            setPassword('');
+
             router.push('/Profile');
         } catch (error) {
             console.error(error);
@@ -85,6 +97,7 @@ const LoginRegister = () => {
     return (
         <div className="Logincontent">
             <div className={`wrapper ${action}`}>
+                {/* Formulario de inicio de sesión */}
                 <div className="form-box login">
                     <form onSubmit={handleLogin}>
                         <h1>Inicio de sesión</h1>
@@ -123,9 +136,36 @@ const LoginRegister = () => {
                     </form>
                 </div>
 
+                {/* Formulario de registro */}
                 <div className="form-box register">
                     <form onSubmit={handleRegister}>
                         <h1>Registro</h1>
+
+                        {/* Campo Nombre */}
+                        <div className="input-box">
+                            <input
+                                type="text"
+                                placeholder="Nombre"
+                                value={name}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                required
+                            />
+                            <FaUser className="icon" />
+                        </div>
+
+                        {/* Campo Apellido */}
+                        <div className="input-box">
+                            <input
+                                type="text"
+                                placeholder="Apellidos"
+                                value={last_name}
+                                onChange={(e) => setLastName(e.target.value)}
+                                required
+                            />
+                            <FaUser className="icon" />
+                        </div>
+
+                        {/* Campo Usuario */}
                         <div className="input-box">
                             <input
                                 type="text"
@@ -136,6 +176,8 @@ const LoginRegister = () => {
                             />
                             <FaUser className="icon" />
                         </div>
+
+                        {/* Campo Correo Electrónico */}
                         <div className="input-box">
                             <input
                                 type="email"
@@ -146,20 +188,22 @@ const LoginRegister = () => {
                             />
                             <FaEnvelope className="icon" />
                         </div>
+
+                        {/* Campo Contraseña */}
                         <div className="input-box">
                             <input
-                                type={showPassword ? "text" : "password"} // Alterna entre texto y contraseña
+                                type={showPassword ? "text" : "password"}
                                 placeholder="Contraseña"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
                             <FaLock className="icon" />
-                            {/* Icono de ojo para alternar la visibilidad de la contraseña */}
                             <span onClick={togglePasswordVisibility} className="eye-icon">
-                                {showPassword ? <FaEyeSlash /> : <FaEye />} 
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
                             </span>
                         </div>
+
                         <div className="remember-forgot">
                             <label> <input type="checkbox" />Acepto los términos y condiciones</label>
                         </div>

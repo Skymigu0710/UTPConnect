@@ -1,4 +1,4 @@
-.Logincontent{
+.Logincontent {
    display: flex;
    justify-content: center;
    height: 100vh;
@@ -6,10 +6,11 @@
    flex-direction: column;
    width: 100%;
 }
+
 .wrapper {
     position: relative;
     width: 420px;
-    height: 450px;
+    height: auto; /* Deja que el contenedor se ajuste al contenido */
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .1);
     backdrop-filter: blur(30px);
@@ -17,55 +18,61 @@
     box-shadow: 0 0 10px rgba(0, 0, 0,.2);
     color: #fff;
     display: flex;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
     overflow: hidden;
     transition: height .2s ease;
-    box-sizing: border-box;
-}
-.wrapper.active {
-   height: 520px;
+    justify-content: space-between; /* Distribuye los elementos a lo largo del contenedor */
 }
 
-.wrapper .form-box { 
-    padding: 30px;
+.wrapper.active {
+    height: 650px; /* Ajusta la altura cuando se muestra el formulario de registro */
+}
+
+.wrapper .form-box {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column; /* Distribuye los elementos verticalmente */
+    flex-grow: 1;
 }
 
 .wrapper .form-box.login {
-   transition: translate .18s ease;
-   translate: 0;
+    transition: translate .18s ease;
+    translate: 0;
 }
 
 .wrapper.active .form-box.login {
-   transition: none;
-   translate: -400px;
+    transition: none;
+    translate: -400px;
 }
 
 .wrapper .form-box.register {
-   position: absolute;
-   transition: none;
-   translate: 400px;
+    position: absolute;
+    transition: none;
+    translate: 400px;
 }
 
 .wrapper.active .form-box.register {
-   transition: translate .18s ease;
-   translate: 0;
+    transition: translate .18s ease;
+    translate: 0;
 }
 
 form h1 {
     font-size: 36px;
     text-align: center;
+    margin-bottom: 20px;
 }
+
 form .input-box {
     position: relative;
     width: 100%;
-    height: 30px;
-    margin: 50px 0;
+    height: 40px;
+    margin: 15px 0;
 }
+
 .input-box input {
-    width: 100%;
+    width: 290px;
     background: transparent;
     border: none;
     outline: none;
@@ -75,14 +82,16 @@ form .input-box {
     color: #fff;
     padding: 20px 20px 20px 45px;
 }
+
 .input-box input::placeholder {
     color: #fff;
 }
+
 .input-box .icon {
     position: absolute;
-    left: 20px; /* Alinea los íconos a la izquierda */
-    transform: translateY(50%); /* Ajusta la posición para centrar el ícono */
-    top: 50%;/* Alinea verticalmente al 50% del campo */
+    left: 20px;
+    top: 50%;
+    transform: translateY(10%);
     font-size: 16px;
 }
 
@@ -91,22 +100,25 @@ form .remember-forgot {
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
-    gap:10px;
- }
+    gap: 10px;
+}
 
 .remember-forgot label input {
     accent-color: #fff;
     margin: 4px;
- }
+}
+
 .remember-forgot a {
-   margin-top: 4px;
+    margin-top: 4px;
     color: #fff;
     text-decoration: none;
- }
- .remember-forgot a:hover {
+}
+
+.remember-forgot a:hover {
     text-decoration: underline;
- }
- form button {
+}
+
+form button {
     width: 100%;
     height: 45px;
     background: #fff;
@@ -118,36 +130,53 @@ form .remember-forgot {
     font-size: 16px;
     color: #333;
     font-weight: 700;
-    /* display: flex; Usamos flexbox para centrar */
-    justify-content: center; /* Centra el texto dentro del botón */
-    align-items: center; /* Asegura que el contenido esté centrado verticalmente */
+    justify-content: center;
+    align-items: center;
+}
 
- }
-
- form .register-link {
+form .register-link {
     font-size: 14.5px;
     text-align: center;
     margin: 20px 0 15px;
- }
+}
 
- .register-link p a {
+.register-link p a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
- }
- 
- .register-link p a:hover {
+}
+
+.register-link p a:hover {
     text-decoration: underline;
- }
- .eye-icon {
+}
+
+.eye-icon {
    position: absolute;
-   right: -40px;
+   right: 20px;
    top: 50%;
-   transform: translateY(30%);
+   transform: translateY(10%);
    cursor: pointer;
    color: #ffffff;
-   font-size: 20px; /* Ajusta el tamaño del ícono */
+   font-size: 20px;
 }
+
 .input-box {
    position: relative;
+}
+
+.form-box.register .input-box {
+    margin: 25px 0; /* Menos espacio entre los campos de registro */
+}
+
+.form-box.login .input-box {
+    margin: 30px 0; /* Más espacio entre los campos de inicio de sesión */
+}
+
+/* Agregar mayor espaciado entre los campos de formulario */
+form .input-box input {
+    padding: 18px 20px 18px 45px; /* Ajustar el relleno de los campos de entrada */
+}
+
+form .remember-forgot {
+    margin-top: 10px;
 }
