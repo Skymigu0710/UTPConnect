@@ -12,16 +12,13 @@ const MyComponent = ({ userData }) => {
           </div>
           <div className="info_unit">
             <p>Cumpleaños</p>
-            <text>07/10/2002</text>
+            <text>{userData.birthdate}</text>
           </div>
           <div className="info_unit">
             <p>Carrera</p>
-            <text>Ingeniería de sistemas y software</text>
+            <text>{userData.career}</text>
           </div>
         </div>
-      </div>
-      <div className="editinfo">
-        <Button>Editar</Button>
       </div>
 
     </div>

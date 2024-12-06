@@ -10,13 +10,13 @@ const gato = '/images/th.jpeg';
 export default function App() {
 
     const router = new useRouter();
-
+    const [userData, setUserData] = useState(null); 
     
-    const [userData, setUserData] = useState(null); // Estado para almacenar los datos del usuario
     useEffect(() => {
       // Intenta obtener el token y los detalles del usuario desde localStorage
       const token = localStorage.getItem('token');
       const storedUserDetails = localStorage.getItem('userDetails');
+      
       if (!token) {
         // Si no hay token, redirige al login o maneja el error
         router.push('/LoginRegister'); // Descomenta esta línea si necesitas redirigir

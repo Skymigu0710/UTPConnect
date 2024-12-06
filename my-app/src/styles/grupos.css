@@ -7,7 +7,6 @@
     padding-left:30px;
     padding-right:30px;
     margin-top: 50px;
-    height: 300px;
     border-radius: 20px;
     border: 1px solid  rgb(47, 51, 54) ;
 }
@@ -45,8 +44,11 @@ h1 {
 }
 .group-item {
     display: flex;
-    align-items: center;
-    padding: 10px 0;
+    background-color: #2e2e2e;
+    padding: 13px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 .group-item img {
     border-radius: 50%;

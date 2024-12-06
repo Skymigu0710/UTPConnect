@@ -18,7 +18,7 @@ const DropdownNav = () => {
             {isDropdownVisible && ( // Mostrar el contenido del dropdown solo si isDropdownVisible es true
                 <div className="navcontent">
                     <li>
-                        <Link href={'./LoginRegister'}>Cerrar sesión</Link>
+                        <Link href={"/LoginRegister"}>Cerrar sesión</Link>
                     </li>
                 </div>
             )}

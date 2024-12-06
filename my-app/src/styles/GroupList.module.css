@@ -1,0 +1,49 @@
+.groupList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .groupCards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .groupCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    width: 500px;
+    height: 80px;
+
+  }
+  .groupList h1 {
+    margin: 0 0 8px;
+    color: white;
+  }
+  
+  .groupCard h2 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: white;
+  }
+  
+  .groupCard p {
+    font-size: 14px;
+    color: white;
+  }
+  
+  .groupCard a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+  }
+  
+  .groupCard a:hover {
+    text-decoration: underline;
+  }
+  

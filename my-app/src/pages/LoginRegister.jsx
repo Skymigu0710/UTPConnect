@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
+import { FaUser, FaLock, FaEnvelope, FaEye, FaEyeSlash } from "react-icons/fa"; // Importa los íconos de ojo
 import { useRouter } from 'next/navigation'; // Importa useRouter
 import '../styles/LoginRegister.css';
 
-
 const LoginRegister = () => {
-
     const router = useRouter(); // Llama a useRouter
-
     const [action, setAction] = useState('');
-
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [name, setFirstName] = useState(''); // Estado para el nombre
+    const [last_name, setLastName] = useState('');   // Estado para el apellido
+    const [showPassword, setShowPassword] = useState(false); // Estado para controlar la visibilidad de la contraseña
 
     const registerLink = () => {
         setAction('active');
@@ -22,16 +21,17 @@ const LoginRegister = () => {
     };
 
     const handleRegister = async (e) => {
-        e.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-
+        e.preventDefault();
         const userData = {
-            username,
-            email,
-            password,
+            name,      // Nuevo campo: Nombre
+            last_name,       // Nuevo campo: Apellido
+            username,       // Nombre de usuario
+            email,          // Correo electrónico
+            password,       // Contraseña
         };
 
         try {
-            const response = await fetch(' http://localhost:8083/auth/register', {  // Cambia la URL según tu backend
+            const response = await fetch('http://localhost:8083/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -44,20 +44,24 @@ const LoginRegister = () => {
             }
 
             const data = await response.json();
-            console.log(data); // Maneja la respuesta según sea necesario
-            // Si el backend devuelve un token después del registro, puedes almacenarlo también
+            console.log(data);
             if (data.token) {
                 localStorage.setItem('token', data.token);
             }
 
-            // redirigir al usuario 
-            router.push('/Profile'); // Redirige a la página de dashboard
+            // Limpiar los campos después del registro exitoso
+            setFirstName('');
+            setLastName('');
+            setUsername('');
+            setEmail('');
+            setPassword('');
 
+            router.push(`/Profile/${data.userDetails.id_auth}`);
         } catch (error) {
             console.error(error);
-            // Maneja el error (puedes mostrar un mensaje al usuario)
         }
     };
+
     const handleLogin = async (e) => {
         e.preventDefault();
         const userData = { username: username, password: password };
@@ -76,23 +80,30 @@ const LoginRegister = () => {
             const data = await response.json();
             console.log(data);
 
-            // Almacenar el token en localStorage
             localStorage.setItem('token', data.token);
-            localStorage.setItem('userDetails', JSON.stringify(data.userDetails)); // Asegúrate de que 'userDetails' sea parte de la respuesta
-            localStorage.setItem('userId', data.userDetails.id_users);
+            localStorage.setItem('userDetails', JSON.stringify(data.userDetails));
+            localStorage.setItem('userId', data.userDetails.id_auth);
 
-            // Redirigir a otra ventana (puedes cambiar la URL)
-            router.push(`/Profile/${data.userDetails.id_users}`);
-            
+            router.push(`/Profile/${data.userDetails.id_auth}`);
         } catch (error) {
             console.error(error);
-            // Maneja el error (puedes mostrar un mensaje al usuario)
         }
-        
     };
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword); // Alterna el estado de visibilidad
+    };
+
+
+
     return (
         <div className="Logincontent">
+            <div className="left-text">
+                <h1>Bienvenido a UTP CONNECT</h1>
+                <p>Inicia sesión o regístrate para empezar a disfrutar de nuestros servicios.</p>
+            </div>
             <div className={`wrapper ${action}`}>
+                {/* Formulario de inicio de sesión */}
                 <div className="form-box login">
                     <form onSubmit={handleLogin}>
                         <h1>Inicio de sesión</h1>
@@ -108,13 +119,17 @@ const LoginRegister = () => {
                         </div>
                         <div className="input-box">
                             <input
-                                type="password"
-                                placeholder="contraseña"
+                                type={showPassword ? "text" : "password"} // Alterna entre texto y contraseña
+                                placeholder="Contraseña"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
                             <FaLock className="icon" />
+                            {/* Icono de ojo para alternar la visibilidad de la contraseña */}
+                            <span onClick={togglePasswordVisibility} className="eye-icon">
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            </span>
                         </div>
                         <div className="remember-forgot">
                             <label> <input type="checkbox" />recordarme </label>
@@ -127,9 +142,36 @@ const LoginRegister = () => {
                     </form>
                 </div>
 
+                {/* Formulario de registro */}
                 <div className="form-box register">
                     <form onSubmit={handleRegister}>
                         <h1>Registro</h1>
+
+                        {/* Campo Nombre */}
+                        <div className="input-box">
+                            <input
+                                type="text"
+                                placeholder="Nombre"
+                                value={name}
+                                onChange={(e) => setFirstName(e.target.value)}
+                                required
+                            />
+                            <FaUser className="icon" />
+                        </div>
+
+                        {/* Campo Apellido */}
+                        <div className="input-box">
+                            <input
+                                type="text"
+                                placeholder="Apellidos"
+                                value={last_name}
+                                onChange={(e) => setLastName(e.target.value)}
+                                required
+                            />
+                            <FaUser className="icon" />
+                        </div>
+
+                        {/* Campo Usuario */}
                         <div className="input-box">
                             <input
                                 type="text"
@@ -140,26 +182,34 @@ const LoginRegister = () => {
                             />
                             <FaUser className="icon" />
                         </div>
+
+                        {/* Campo Correo Electrónico */}
                         <div className="input-box">
                             <input
                                 type="email"
-                                placeholder="correo electronico"
+                                placeholder="Correo electrónico"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
                             <FaEnvelope className="icon" />
                         </div>
+
+                        {/* Campo Contraseña */}
                         <div className="input-box">
                             <input
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 placeholder="Contraseña"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
                             <FaLock className="icon" />
+                            <span onClick={togglePasswordVisibility} className="eye-icon">
+                                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            </span>
                         </div>
+
                         <div className="remember-forgot">
                             <label> <input type="checkbox" />Acepto los términos y condiciones</label>
                         </div>
@@ -171,7 +221,7 @@ const LoginRegister = () => {
                 </div>
             </div>
         </div>
-
     );
 };
+
 export default LoginRegister;
