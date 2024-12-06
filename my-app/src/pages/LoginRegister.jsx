@@ -91,11 +91,18 @@ const LoginRegister = () => {
     };
 
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword); // Alterna el estado de visibilidad
+        setShowPassword(!showPassword); // Alterna entre la visibilidad
     };
 
     return (
         <div className="Logincontent">
+            {/* Texto a la izquierda */}
+            <div className="left-text">
+                <h1>Bienvenido a UTP CONNECT</h1>
+                <p>Inicia sesión o regístrate para empezar a disfrutar de nuestros servicios.</p>
+            </div>
+
+            {/* Formulario (de inicio de sesión y registro) */}
             <div className={`wrapper ${action}`}>
                 {/* Formulario de inicio de sesión */}
                 <div className="form-box login">
