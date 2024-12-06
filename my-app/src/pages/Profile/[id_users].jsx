@@ -13,7 +13,8 @@ import EditProfile from '../../components/EditProfile';
 import Menu from '../../components/Menu';
 import Grupos from '../../components/Grupos';
 
-const gato = '/images/th.jpeg';
+
+
 /**
  * Componente principal de la aplicación.
  * @returns {JSX.Element} El componente renderizado.
@@ -44,7 +45,7 @@ export default function Profile() {
     // Llama a la API para obtener los datos del usuario
     const fetchUserData = async () => {
       try {
-          const response = await fetch(`http://localhost:8082/api/users/${id_users}`, {
+          const response = await fetch(`http://localhost:8083/auth/api/users/${id_users}`, {
               method: 'GET',
               headers: {
                   'Content-Type': 'application/json',
@@ -92,7 +93,7 @@ export default function Profile() {
           <div className="searchbarre">
             <input type="search" className="search-input" placeholder="Buscar grupos..." />
           </div>
-          <Studentsprofile gato={gato} userData={userData} handleclick={handleEditButtonClick} />
+          <Studentsprofile userData={userData} handleclick={handleEditButtonClick} />
           <div className={styles.feed}>
             <Profileoptions components={[
               <PostFeed key="postfeed" userData={userData} />,
@@ -107,7 +108,7 @@ export default function Profile() {
         </div>
       </div>
       <div className={styles.groupsconteiner}>
-        <Grupos gato={gato} />
+        <Grupos/>
       </div>
 
     </div>

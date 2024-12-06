@@ -24,7 +24,9 @@ function Menu ()  {
                 <li><Link className="menu-item" href={"/Mainfeed"}><HomeIcon /><p>Home</p></Link> </li>
                 <li><Link className="menu-item" href={`/Profile/${userId}`}><PersonIcon /> <p>Profile</p></Link></li>
                 <li><Link className="menu-item" href="#home"><NotificationsNoneIcon /><p>Notifications</p></Link></li>
-                <li><Link className="menu-item" href={"/Profile"}><PeopleAltIcon /> <p>Groups</p></Link></li>
+                <li><Link className="menu-item" href={"/GroupList"}><PeopleAltIcon /> <p>Groups</p></Link></li>
+                <li><Link className="menu-item" href={"/mainGroup"}><PeopleAltIcon /> <p>Create Group</p></Link></li>
+
         </div>
     </div>
 );

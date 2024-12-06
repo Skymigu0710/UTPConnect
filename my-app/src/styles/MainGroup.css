@@ -1,0 +1,98 @@
+/* Estilo general de la aplicación */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-color: #121212; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sección con contenido dinámico centrado */
+  .section.scrollable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ocupa todo el espacio disponible */
+    padding: 20px;
+    background-color: #121212; /* Fondo oscuro */
+    overflow-y: auto; /* Permite scroll si el contenido es demasiado grande */
+  }
+  
+  /* Estilo para el encabezado */
+  .header {
+    background-color: #1e1e1e; /* Fondo oscuro */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* Texto blanco */
+    border-bottom: 1px solid #333333; /* Borde inferior gris oscuro */
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Contenedor principal del feed */
+  .main-feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Sección izquierda y derecha */
+  .left-section, .right-section {
+    width: 20%;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Sección central */
+  .center-section {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para la sección de creación de grupo */
+  .space.portada {
+    width: 100%;
+    max-width: 600px; /* Tamaño máximo para la ventana de creación */
+    background-color: #1e1e1e; /* Fondo oscuro */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  /* Sección estática inferior */
+  .section.static {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    color: #ffffff;
+    border-top: 1px solid #333333; /* Borde superior gris oscuro */
+  }
+  
+  /* Estilo para la lista de grupos */
+  .group-list {
+    width: 100%;
+  }
+  
+  .group-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .group-item p {
+    margin: 0;
+  }
+  
+  .group-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+  }

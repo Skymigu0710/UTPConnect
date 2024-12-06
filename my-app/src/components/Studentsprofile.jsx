@@ -5,7 +5,7 @@ import { IoAddCircle, IoRemoveCircle } from "react-icons/io5";
 import { FaEdit } from 'react-icons/fa'; 
 import Image from 'next/image';
 
-function Studentsprofile ({ gato, userData, handleclick })  {
+function Studentsprofile ({userData, handleclick })  {
 
     //estado para controlar si se está siguiendo o no
     const [isfollowing, setIsfollowing] = useState(false);
@@ -19,7 +19,7 @@ return (
     <>
 
         <div className={`${styles.space} ${styles.portada}`}>
-            <img id={styles.imgcat} src={gato} alt="Portada" />
+            <img id={styles.imgcat} src={userData.coverPictureUrl} alt="Portada" />
             <Button variant="contained"
                 style={{
                     position: 'absolute',
@@ -35,12 +35,12 @@ return (
         
         <div className={`${styles.space} ${styles.information}`}>
         <div className={`${styles.space} ${styles.photo}`}>
-            <Image id={styles.imgprofile} src={gato} alt="Perfil" 
+            <Image id={styles.imgprofile} src={userData.profilePictureUrl} alt="Perfil" 
                 width= {130}
                 height={130}
             />
             <div className={styles.namecontent}>
-            {userData.name}
+            {userData.name} + {userData.last_name}
                 <br />
                 {userData.username}
             </div>
