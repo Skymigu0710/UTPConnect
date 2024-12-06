@@ -31,14 +31,14 @@ function GroupCreation({ onCreateGroup }) {
           },
           body: JSON.stringify({
             name: localGroupName,
-            privado: localGroupPrivacy === 'Private', // Convertir a booleano
+            privado: localGroupPrivacy, // Enviar como cadena
             imagen: localGroupImage,
           }),
         });
 
         if (response.ok) {
           const data = await response.json();
-          onCreateGroup(data.name, data.privado ? 'Private' : 'Public', data.imagen);
+          onCreateGroup(data.name, data.privado, data.imagen);
           alert('Grupo creado exitosamente');
         } else {
           const errorData = await response.json();
